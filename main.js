@@ -2,7 +2,7 @@
 
 // Enlaces: cuando estén publicados, se pegan aquí y la página los usa.
 const LINKS = {
-  download: "",   // p. ej. https://sourceforge.net/projects/quantum-linux/files/latest/download
+  download: "https://sourceforge.net/projects/quantum-linux/files/1.0/quantumlinux-1.0-2026.10.20-x86_64.iso/download",
   tiktok: "https://www.tiktok.com/@quantum.os",
   github: "https://github.com/QuantumLinux-arch",
 };

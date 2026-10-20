@@ -260,3 +260,7 @@ a { color: var(--indigo); }
   .nav > .btn-sm { display: none; }
   .menu-toggle { margin-left: auto; }
 }
+
+.download .sha { flex-basis: 100%; margin: 0; color: #B9B3D6; text-align: right; overflow-wrap: anywhere; }
+.download .sha code { font-size: 12px; }
+@media (max-width: 760px) { .download .sha { text-align: center; } }
