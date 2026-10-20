@@ -253,3 +253,9 @@ a { color: var(--indigo); }
   .kinetic .ch { opacity: 1; transform: none; }
   .reveal { opacity: 1; transform: none; }
 }
+
+/* Celulares angostos: el botón de arriba tapaba el nombre (la portada ya tiene «Descargar») */
+@media (max-width: 440px) {
+  .nav > .btn-sm { display: none; }
+  .menu-toggle { margin-left: auto; }
+}
