@@ -93,6 +93,7 @@ a { color: var(--indigo); }
   display: grid; grid-template-columns: 1fr 1.15fr; gap: 50px; align-items: center;
 }
 .hero h1 { font-size: clamp(42px, 5.6vw, 76px); line-height: 1.04; letter-spacing: -.03em; margin: 22px 0 18px; font-weight: 900; }
+.motto { font-size: 22px; font-weight: 800; margin: 0 0 14px; letter-spacing: -.01em; }
 .lead { font-size: 19px; color: var(--muted); max-width: 540px; }
 .cta { display: flex; flex-wrap: wrap; gap: 14px; margin: 30px 0 14px; }
 .cta.center { justify-content: center; }
