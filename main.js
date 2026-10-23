@@ -40,7 +40,7 @@ const io = new IntersectionObserver((entries) => {
   entries.forEach((e) => {
     if (!e.isIntersecting) return;
     const siblings = [...e.target.parentElement.querySelectorAll(":scope > .reveal")];
-    e.target.style.transitionDelay = `${Math.max(0, siblings.indexOf(e.target)) * 70}ms`;
+    e.target.style.setProperty("--d", `${Math.max(0, siblings.indexOf(e.target)) * 90}ms`);
     e.target.classList.add("in");
     io.unobserve(e.target);
   });
@@ -65,11 +65,12 @@ document.querySelectorAll(".tab").forEach((tab) => {
     const name = tab.dataset.shot;
     shot.classList.add("swap");
     const img = new Image();
-    img.onload = () => {
+    const t0 = performance.now();
+    img.onload = () => setTimeout(() => {
       shot.src = img.src;
       document.getElementById("caption").textContent = captions[name];
       requestAnimationFrame(() => shot.classList.remove("swap"));
-    };
+    }, Math.max(0, 320 - (performance.now() - t0)));
     img.src = `assets/img/${name}.webp`;
   });
 });
