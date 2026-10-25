@@ -31,25 +31,11 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block">
-  <script>
-  (function(){var r=document.documentElement;try{if(!localStorage.getItem("ql-welcome"))r.classList.add("wel-on")}catch(e){r.classList.add("wel-on")}
-  setTimeout(function(){if(!window.__welReady)r.classList.remove("wel-on")},6000)})();
-  </script>
-  <noscript><style>.welcome{display:none!important}html.wel-on{overflow:auto!important}</style></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="enhance.css">
   <link rel="stylesheet" href="extra.css">
 </head>
 <body>
-  <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welTitle">
-    <div class="wel-card">
-      <div class="wel-logo" id="welLogo"></div>
-      <p class="wel-title" id="welTitle">Bienvenido a Quantum Linux</p>
-      <p class="wel-sub">Como Windows, pero mejor.</p>
-      <button class="btn btn-grad big wel-go" id="welGo" type="button">Continuar<span class="ms">arrow_forward</span></button>
-      <p class="wel-hint">Hecho con la comunidad.</p>
-    </div>
-  </div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="nav" id="nav">
@@ -60,8 +46,8 @@
     <nav class="links" id="links">
       <a href="#por-que">Por qué</a>
       <a href="#capturas">Capturas</a>
-      <a href="#comparacion">Comparación</a>
       <a href="#instalar">Instalar</a>
+      <a href="#desde-windows">Desde Windows</a>
       <a href="#preguntas">Preguntas</a>
       <a href="#creditos">Créditos</a>
     </nav>
@@ -103,47 +89,32 @@
         <article class="card reveal">
           <span class="icon ms">sports_esports</span>
           <h3>Hecho para jugar</h3>
-          <p>Steam con Proton viene listo, más el kernel Zen, un modo juego que quita distracciones y los FPS en pantalla con MangoHud.</p>
+          <p>Steam con Proton listo, kernel Zen, modo juego y Fotón: todos tus juegos de Steam, Epic, GOG y Windows en un solo lugar.</p>
         </article>
         <article class="card reveal">
           <span class="icon ms">desktop_windows</span>
           <h3>Fácil si vienes de Windows</h3>
-          <p>Barra de tareas abajo, menú Inicio, botones de minimizar y maximizar, Alt+Tab y Win+E. Y una guía «Vengo de Windows» dentro del sistema.</p>
+          <p>Barra de tareas, menú Inicio y los atajos de siempre. Los .exe se abren con doble clic y te traes tus cosas desde un pendrive.</p>
         </article>
         <article class="card reveal">
           <span class="icon ms">storefront</span>
           <h3>Quantum Store</h3>
-          <p>Una sola tienda para todo: los repos de Arch, Flathub y AUR (la comunidad). Buscas, haces clic y listo.</p>
+          <p>Una sola tienda para todo: los repos de Arch, Flathub y AUR. Buscas, haces clic y listo.</p>
         </article>
         <article class="card reveal">
           <span class="icon ms">palette</span>
           <h3>Tu estilo, al instante</h3>
-          <p>Modo claro u oscuro, fondos y colores que se adaptan a tu fondo de pantalla en todo el sistema. Sin reiniciar nada.</p>
+          <p>Modo claro u oscuro y colores que se adaptan a tu fondo en todo el sistema. Sin reiniciar nada.</p>
         </article>
         <article class="card reveal">
           <span class="icon ms">verified_user</span>
           <h3>Sin anuncios ni sorpresas</h3>
-          <p>Nada de publicidad en el menú, ni apps «sugeridas», ni reinicios forzados. Las actualizaciones las decides tú.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">stadia_controller</span>
-          <h3>Fotón: todos tus juegos</h3>
-          <p>Una sola biblioteca para Steam, Epic, GOG, Amazon y tus juegos instalados, con portadas grandes y un botón Jugar. Instala Proton-GE con un clic.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">install_desktop</span>
-          <h3>Programas de Windows</h3>
-          <p>Haz doble clic en un .exe y Quantum lo abre con Wine. Si existe una versión para Linux, te ayuda a encontrarla en la Store.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">speed</span>
-          <h3>Modo rendimiento</h3>
-          <p>Un interruptor activa paquetes optimizados para tu procesador (de CachyOS) y un planificador pensado para juegos. Se desactiva igual de fácil.</p>
+          <p>Nada de publicidad ni apps «sugeridas», ni reinicios forzados. Las actualizaciones las decides tú.</p>
         </article>
         <article class="card reveal">
           <span class="icon ms">history</span>
           <h3>Vuelve atrás si algo falla</h3>
-          <p>Antes de cada actualización se guarda una instantánea del sistema (Btrfs + Snapper). Si algo sale mal, eliges la anterior al arrancar.</p>
+          <p>Antes de cada actualización se guarda una copia del sistema. Si algo sale mal, eliges la anterior al arrancar.</p>
         </article>
       </div>
     </section>
@@ -221,17 +192,28 @@
         <p class="tiny">Antes de instalar, respalda tus archivos importantes.</p>
       </div>
 
+    </section>
+
+    <!-- Desde Windows -->
+    <section class="section" id="desde-windows">
+      <h2 class="reveal">Trae tus cosas de <span class="grad">Windows</span></h2>
+      <p class="sub reveal">Tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam, en Quantum en minutos.</p>
+      <ol class="steps">
+        <li class="step reveal"><span class="num">1</span><h3>En Windows</h3><p>Descarga «Pasar a Quantum» y ábrelo. No se instala.</p></li>
+        <li class="step reveal"><span class="num">2</span><h3>Copia a un pendrive</h3><p>Elige qué llevar y se copia todo con un clic.</p></li>
+        <li class="step reveal"><span class="num">3</span><h3>Conéctalo en Quantum</h3><p>Quantum lo detecta y deja cada cosa en su lugar.</p></li>
+      </ol>
       <div class="download migrate reveal" id="pasar-a-quantum">
         <div class="dl-info">
           <span class="dl-orbit"><span class="ms" style="font-size:44px">move_to_inbox</span></span>
           <div>
-            <h3>¿Vienes de Windows? Lleva tus cosas</h3>
-            <p>Abre «Pasar a Quantum» en Windows, copia tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam a un pendrive, y conéctalo en Quantum: se acomoda todo solo.</p>
+            <h3>Pasar a Quantum</h3>
+            <p>Para Windows 10 y 11 · 6 MB · No se instala</p>
           </div>
         </div>
-        <a class="btn btn-grad big" href="descargas/pasar-a-quantum.zip" download><span class="ms">download</span>Descargar «Pasar a Quantum»</a>
-        <ul class="dl-chips"><li>Para Windows 10 y 11</li><li>3 MB</li><li>No se instala</li></ul>
-        <p class="tiny">Descomprime el zip en el pendrive y haz doble clic en «Pasar a Quantum». Si Windows dice «Windows protegió tu PC», toca «Más información» y luego «Ejecutar de todas formas».</p>
+        <a class="btn btn-grad big" href="descargas/Pasar-a-Quantum.exe" download="Pasar a Quantum.exe"><span class="ms">download</span>Descargar para Windows</a>
+        <p class="tiny">Si Windows dice «Windows protegió tu PC», toca «Más información» y luego «Ejecutar de todas formas».</p>
+        <p class="tiny sha">SHA256: <code>6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03</code><button class="copy" type="button" data-copy="6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
       </div>
     </section>
 
@@ -239,21 +221,12 @@
     <section class="section" id="preguntas">
       <h2 class="reveal">Preguntas <span class="grad">frecuentes</span></h2>
       <div class="faq">
-        <details class="reveal"><summary>¿Puedo traer mis cosas de Windows?</summary><p>Sí. Con «Pasar a Quantum» copias en Windows tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam a un pendrive. Al conectarlo en Quantum, todo va a su lugar. Lo descargas arriba, junto al ISO.</p></details>
+        <details class="reveal"><summary>¿Puedo traer mis cosas de Windows?</summary><p>Sí. Con «Pasar a Quantum» copias en Windows tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam a un pendrive. Al conectarlo en Quantum, todo va a su lugar. Lo descargas en la sección «Trae tus cosas de Windows».</p></details>
         <details class="reveal"><summary>¿Es gratis de verdad?</summary><p>Sí. Quantum Linux es gratis y de código abierto. No hay versión de pago, ni suscripciones, ni anuncios.</p></details>
         <details class="reveal"><summary>¿Funcionan mis juegos de Windows?</summary><p>Muchísimos sí, gracias a Steam y Proton. Algunos juegos con antitrampas (como Valorant) todavía no funcionan en Linux. Puedes revisar cada juego en <a href="https://www.protondb.com/" target="_blank" rel="noopener">ProtonDB</a>.</p></details>
         <details class="reveal"><summary>¿Necesito saber usar la terminal?</summary><p>No. Instalas apps desde Quantum Store, cambias ajustes desde el Centro Quantum y actualizas con un botón.</p></details>
         <details class="reveal"><summary>¿Puedo probarlo sin instalar?</summary><p>Sí. Al arrancar desde el USB entras a una sesión de prueba completa; nada cambia en tu PC hasta que pulsas «Instalar Quantum».</p></details>
-        <details class="reveal"><summary>¿Por qué «Quark»?</summary><p>Es el nombre clave de la versión 1.0. Los quarks son las partículas que forman casi toda la materia, y cada versión de Quantum llevará el nombre de una partícula.</p></details>
       </div>
-    </section>
-
-    <!-- Recomendado (intercambio de promoción) -->
-    <section class="section promo reveal" id="recomendado" aria-label="Recomendado por Quantum">
-      <span class="promo-tag">Publicidad · Recomendado por Quantum</span>
-      <a class="promo-card" href="https://emprepage.dev/" target="_blank" rel="sponsored noopener">
-        <img src="assets/promo/emprepage.webp" alt="EmprePage: crea tu web en minutos" width="1080" height="540" loading="lazy">
-      </a>
     </section>
 
     <!-- Créditos -->
@@ -300,22 +273,22 @@
         <a href="https://waydro.id" target="_blank" rel="noopener">Waydroid</a>
         <a href="https://cachyos.org" target="_blank" rel="noopener">CachyOS</a>
       </div>
+      <a class="promo-line reveal" href="https://emprepage.dev/" target="_blank" rel="sponsored noopener" aria-label="Recomendado: EmprePage">
+        <img src="assets/promo/emprepage.webp" alt="" width="180" height="90" loading="lazy">
+        <span><span class="promo-tag">Recomendado</span><b>EmprePage</b> · Crea la web de tu emprendimiento en minutos</span>
+        <span class="ms">open_in_new</span>
+      </a>
       <p class="tiny center reveal">¿Quieres colaborar? Únete al <a href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener">Discord de Quantum</a>.</p>
     </section>
 
-    <!-- Comunidad -->
-    <section class="section community reveal" id="comunidad">
-      <h2>Sigue el <span class="grad">proyecto</span></h2>
-      <p class="sub">Cada día publico cómo voy creando Quantum Linux.</p>
-      <div class="cta center">
-        <a class="btn btn-dark" id="tiktokLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">smart_display</span>TikTok</a>
-        <a class="btn btn-ghost" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><span class="ms">forum</span>Discord</a>
-        <a class="btn btn-ghost" id="githubLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">code</span>GitHub</a>
-      </div>
-    </section>
   </main>
 
-  <footer class="footer">
+  <footer class="footer" id="comunidad">
+    <div class="foot-links">
+      <a class="btn btn-sm btn-dark" id="tiktokLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">smart_display</span>TikTok</a>
+      <a class="btn btn-sm btn-ghost" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><span class="ms">forum</span>Discord</a>
+      <a class="btn btn-sm btn-ghost" id="githubLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">code</span>GitHub</a>
+    </div>
     <img src="assets/quantum-mark.svg" alt="" width="28" height="28">
     <span>Quantum Linux · Como Windows, pero mejor. Hecho con la comunidad.</span>
     <span class="tiny">No está afiliado a Microsoft ni a Arch Linux.</span>
