@@ -14,6 +14,11 @@
   <title>Quantum Linux · Bonito, rápido y listo para jugar</title>
   <meta name="description" content="Quantum Linux 1.0 «Quark»: una distro basada en Arch, gratis y sin anuncios, pensada para quienes vienen de Windows y para jugar.">
   <meta name="theme-color" content="#6A5CFF">
+  <link rel="manifest" href="manifest.webmanifest">
+  <meta name="mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="Quantum">
   <meta property="og:type" content="website">
   <meta property="og:title" content="Quantum Linux">
   <meta property="og:description" content="Como Windows, pero mejor. Hecho con la comunidad. Gratis y sin anuncios.">
@@ -26,10 +31,25 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
   <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block">
+  <script>
+  (function(){var r=document.documentElement;try{if(!localStorage.getItem("ql-welcome"))r.classList.add("wel-on")}catch(e){r.classList.add("wel-on")}
+  setTimeout(function(){if(!window.__welReady)r.classList.remove("wel-on")},6000)})();
+  </script>
+  <noscript><style>.welcome{display:none!important}html.wel-on{overflow:auto!important}</style></noscript>
   <link rel="stylesheet" href="styles.css">
   <link rel="stylesheet" href="enhance.css">
+  <link rel="stylesheet" href="extra.css">
 </head>
 <body>
+  <div class="welcome" id="welcome" role="dialog" aria-modal="true" aria-labelledby="welTitle">
+    <div class="wel-card">
+      <div class="wel-logo" id="welLogo"></div>
+      <p class="wel-title" id="welTitle">Bienvenido a Quantum Linux</p>
+      <p class="wel-sub">Como Windows, pero mejor.</p>
+      <button class="btn btn-grad big wel-go" id="welGo" type="button">Continuar<span class="ms">arrow_forward</span></button>
+      <p class="wel-hint">Hecho con la comunidad.</p>
+    </div>
+  </div>
   <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
 
   <header class="nav" id="nav">
@@ -178,15 +198,16 @@
 
       <div class="download reveal" id="descargar">
         <div class="dl-info">
-          <img src="assets/quantum-mark.svg" alt="" width="72" height="72">
+          <span class="dl-orbit"><img src="assets/quantum-mark.svg" alt="" width="72" height="72"></span>
           <div>
             <h3>Quantum Linux 1.0 «Quark»</h3>
             <p>x86_64 · Arch Linux · Kernel Zen · Quantum Shell</p>
           </div>
         </div>
         <a class="btn btn-grad big" id="downloadBtn" href="#descargar"><span class="ms">download</span>Descargar ISO</a>
+        <ul class="dl-chips"><li>ISO de 3,7 GB</li><li>64 bits</li><li>Sin cuentas ni registros</li></ul>
         <p class="tiny" id="dlNote"></p>
-        <p class="tiny sha">SHA256: <code>2625523ec36dbce3873347fd24ebdcc84adb22b7279187c455f17a76c3a1d419</code></p>
+        <p class="tiny sha">SHA256: <code>2625523ec36dbce3873347fd24ebdcc84adb22b7279187c455f17a76c3a1d419</code><button class="copy" type="button" data-copy="2625523ec36dbce3873347fd24ebdcc84adb22b7279187c455f17a76c3a1d419" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
       </div>
 
       <div class="reqs reveal">
@@ -289,5 +310,6 @@
   <div class="toast" id="toast" role="status"></div>
   <script src="main.js"></script>
   <script src="enhance.js"></script>
+  <script src="extra.js"></script>
 </body>
 </html>
