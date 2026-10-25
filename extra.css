@@ -219,3 +219,10 @@ html.wel-on .btn-grad.wel-go { animation-play-state: running; }
 html[data-device="mobile"] .to-top { right: 14px; bottom: calc(96px + env(safe-area-inset-bottom, 0px)); }
 .faq details > summary { transition: color .25s; }
 .faq details[open] > summary { color: var(--indigo); }
+
+/* ---------- Pasar a Quantum (desde Windows) ---------- */
+.download.migrate { margin-top: 30px; background: linear-gradient(120deg, #0E3B57, #22407F 55%, #3B2C9A); }
+.download.migrate .dl-info { flex: 1 1 520px; }
+.download.migrate .dl-info p { max-width: 640px; }
+.download.migrate .dl-orbit { display: grid; place-items: center; width: 72px; height: 72px; flex: none; color: #fff; }
+.download.migrate .tiny { text-align: left; }
