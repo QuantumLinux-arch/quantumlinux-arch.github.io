@@ -143,3 +143,12 @@ html[data-device="mobile"] .to-top { right: 14px; bottom: calc(96px + env(safe-a
 /* ---------- Pie con la comunidad ---------- */
 .footer { flex-wrap: wrap; justify-content: center; }
 .foot-links { flex-basis: 100%; display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 10px; }
+
+/* ---------- Instalar desde Windows ---------- */
+.download.wininst { margin-bottom: 30px; background: linear-gradient(120deg, #123A62, #3B2C9A 55%, #7A2FB8); }
+.download.wininst .dl-info { flex: 1 1 520px; }
+.download.wininst .dl-info p { max-width: 640px; }
+.download.wininst .tiny { text-align: left; }
+.beta { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 3px 10px; border-radius: 99px; font-size: 13px;
+  font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #3A2600; background: #FFB547; }
+.iso-title { text-align: center; margin: 50px 0 0; font-size: 24px; }
