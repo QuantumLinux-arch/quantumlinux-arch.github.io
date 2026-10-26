@@ -25,6 +25,10 @@
   <meta property="og:image" content="https://quantumlinux-arch.github.io/assets/og.jpg">
   <meta property="og:url" content="https://quantumlinux-arch.github.io/">
   <meta name="twitter:card" content="summary_large_image">
+  <link rel="canonical" href="https://quantumlinux-arch.github.io/">
+  <link rel="alternate" hreflang="es" href="https://quantumlinux-arch.github.io/">
+  <link rel="alternate" hreflang="en" href="https://quantumlinux-arch.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://quantumlinux-arch.github.io/en/">
   <link rel="icon" type="image/png" href="assets/favicon.png">
   <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -48,8 +52,10 @@
       <a href="#capturas">Capturas</a>
       <a href="#instalar">Instalar</a>
       <a href="#desde-windows">Desde Windows</a>
-      <a href="#preguntas">Preguntas</a>
+      <a href="#novedades">Novedades</a>
+      <a href="#ayuda">Ayuda</a>
       <a href="#creditos">Créditos</a>
+      <a class="lang" href="en/" hreflang="en" lang="en" title="English version">EN</a>
     </nav>
     <a class="btn btn-sm btn-grad" href="#descargar">Descargar</a>
     <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
@@ -187,14 +193,14 @@
         <div class="dl-info">
           <span class="dl-orbit"><img src="assets/quantum-mark.svg" alt="" width="72" height="72"></span>
           <div>
-            <h3>Quantum Linux 1.0 «Quark»</h3>
-            <p>x86_64 · Arch Linux · Kernel Zen · Quantum Shell</p>
+            <h3>Quantum Linux 1.0 «Quark» <span class="beta">Beta</span></h3>
+            <p>Versión del 25 de octubre de 2026 · x86_64 · Arch Linux · Kernel Zen · Quantum Shell</p>
           </div>
         </div>
         <a class="btn btn-grad big" id="downloadBtn" href="#descargar"><span class="ms">download</span>Descargar ISO</a>
-        <ul class="dl-chips"><li>ISO de 3,7 GB</li><li>64 bits</li><li>Sin cuentas ni registros</li></ul>
-        <p class="tiny" id="dlNote"></p>
-        <p class="tiny sha">SHA256: <code>2625523ec36dbce3873347fd24ebdcc84adb22b7279187c455f17a76c3a1d419</code><button class="copy" type="button" data-copy="2625523ec36dbce3873347fd24ebdcc84adb22b7279187c455f17a76c3a1d419" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
+        <ul class="dl-chips"><li>quantumlinux-1.0-2026.10.25-x86_64.iso</li><li>3,7 GB</li><li>UEFI y BIOS</li><li>Arranque seguro</li></ul>
+        <p class="tiny" id="dlNote">Descarga directa desde <a href="https://sourceforge.net/projects/quantum-linux/files/1.0/" target="_blank" rel="noopener">SourceForge</a> (todas las versiones y sus sumas SHA256).</p>
+        <p class="tiny sha">SHA256: <code>7a817be2f50163965aa75b6cc8ac522f2bf24fc7b305415c7698cf33f61d0f71</code><button class="copy" type="button" data-copy="7a817be2f50163965aa75b6cc8ac522f2bf24fc7b305415c7698cf33f61d0f71" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
       </div>
 
       <div class="reqs reveal">
@@ -230,6 +236,103 @@
         <a class="btn btn-grad big" href="descargas/Pasar-a-Quantum.exe" download="Pasar a Quantum.exe"><span class="ms">download</span>Descargar para Windows</a>
         <p class="tiny">Si Windows dice «Windows protegió tu PC», toca «Más información» y luego «Ejecutar de todas formas».</p>
         <p class="tiny sha">SHA256: <code>6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03</code><button class="copy" type="button" data-copy="6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
+      </div>
+    </section>
+
+    <!-- Ficha técnica -->
+    <section class="section" id="ficha">
+      <h2 class="reveal">Ficha <span class="grad">técnica</span></h2>
+      <p class="sub reveal">Lo que hay debajo, para los curiosos.</p>
+      <div class="table-wrap reveal">
+        <table class="compare specs">
+          <tbody>
+            <tr><td>Basada en</td><td>Arch Linux (actualización continua)</td></tr>
+            <tr><td>Arquitectura</td><td>x86_64 (64 bits)</td></tr>
+            <tr><td>Kernel</td><td>linux-zen</td></tr>
+            <tr><td>Escritorio</td><td>Quantum Shell (propio, hecho con Quickshell/QML) sobre Wayfire 0.11 (Wayland)</td></tr>
+            <tr><td>Instalador</td><td>Calamares 3.4 con diseño propio · instalador para Windows (beta)</td></tr>
+            <tr><td>Sistema de archivos</td><td>Btrfs con Snapper: copia del sistema antes de cada actualización</td></tr>
+            <tr><td>Arranque</td><td>GRUB · UEFI y BIOS · arranque seguro (shim firmado + llave propia)</td></tr>
+            <tr><td>Paquetes</td><td>pacman (repos de Arch y repo propio [quantum], firmado) · Flatpak/Flathub · AUR</td></tr>
+            <tr><td>Apps propias</td><td>Centro Quantum, Quantum Store, Fotón (juegos), Pasar a Quantum</td></tr>
+            <tr><td>Juegos</td><td>Steam con Proton, Proton-GE, umu, MangoHud, GameMode</td></tr>
+            <tr><td>Idioma</td><td>Español (interfaz y apps propias)</td></tr>
+            <tr><td>Licencia</td><td>GPL-3.0 (código propio) · software libre</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <!-- Novedades -->
+    <section class="section" id="novedades">
+      <h2 class="reveal"><span class="grad">Novedades</span></h2>
+      <p class="sub reveal">Quantum se actualiza seguido: las mejoras llegan solas con «Actualizar».</p>
+      <ol class="changelog">
+        <li class="reveal">
+          <time datetime="2026-10-25">25 oct 2026</time>
+          <h3>ISO nuevo e instalar desde Windows <span class="beta">Beta</span></h3>
+          <ul>
+            <li>Instalador para Windows: prepara el pendrive, descarga Quantum y lo instala solo junto a Windows.</li>
+            <li>Arranque seguro sin desactivar nada (shim firmado y llave propia de cada PC).</li>
+            <li>«Pasar a Quantum»: tus archivos, fondo, Wi-Fi y favoritos de Windows, en Quantum.</li>
+            <li>Nuevas animaciones: panel que baja al pasar el mouse, menú de apagado, volumen, notificaciones y cambio de fondo.</li>
+            <li>Pantalla de inicio de sesión nueva, igual a la de bloqueo.</li>
+            <li>Arreglos: audífonos Bluetooth que no conectaban y barra de tareas que dejaba de responder.</li>
+          </ul>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-10-22">22 oct 2026</time>
+          <h3>Arreglos de la beta</h3>
+          <ul>
+            <li>Correcciones reportadas por los primeros testers y arranque más rápido.</li>
+            <li>Fotón con una tienda de juegos gratis y juegos de Windows con Proton-GE.</li>
+          </ul>
+        </li>
+        <li class="reveal">
+          <time datetime="2026-10-20">20 oct 2026</time>
+          <h3>Quantum Linux 1.0 «Quark»</h3>
+          <ul>
+            <li>Primera versión pública (beta): Quantum Shell, Centro Quantum, Quantum Store y Fotón.</li>
+          </ul>
+        </li>
+      </ol>
+    </section>
+
+    <!-- Ayuda -->
+    <section class="section" id="ayuda">
+      <h2 class="reveal">Ayuda y <span class="grad">documentación</span></h2>
+      <p class="sub reveal">Lo básico para instalar, mantener y pedir ayuda.</p>
+      <div class="cards">
+        <article class="card reveal">
+          <span class="icon ms">install_desktop</span>
+          <h3>Instalar</h3>
+          <p>Desde Windows con el instalador, o grabando el ISO en un USB y eligiendo «Instalar Quantum» en la sesión de prueba. Ver <a href="#instalar">Instala Quantum</a>.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon ms">system_update</span>
+          <h3>Actualizar</h3>
+          <p>Toca el aviso de actualizaciones en la barra o «Actualizar» en el Centro Quantum. Se actualizan el sistema y las apps de una vez.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon ms">history</span>
+          <h3>Volver atrás</h3>
+          <p>Si una actualización falla, al encender elige la copia anterior del sistema en el menú de arranque.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon ms">bug_report</span>
+          <h3>Reportar un error</h3>
+          <p>Cuéntanos qué pasó y en qué PC: <a href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener">abrir un reporte en GitHub</a>.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon ms">forum</span>
+          <h3>Pedir ayuda</h3>
+          <p>La comunidad responde en el <a href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener">Discord de Quantum</a>.</p>
+        </article>
+        <article class="card reveal">
+          <span class="icon ms">code</span>
+          <h3>Código y paquetes</h3>
+          <p>El proyecto y su repo de paquetes [quantum] (firmado) están en <a href="https://github.com/QuantumLinux-arch" target="_blank" rel="noopener">GitHub</a>.</p>
+        </article>
       </div>
     </section>
 
@@ -305,6 +408,8 @@
       <a class="btn btn-sm btn-dark" id="tiktokLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">smart_display</span>TikTok</a>
       <a class="btn btn-sm btn-ghost" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><span class="ms">forum</span>Discord</a>
       <a class="btn btn-sm btn-ghost" id="githubLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">code</span>GitHub</a>
+      <a class="btn btn-sm btn-ghost" href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener"><span class="ms">bug_report</span>Reportar un error</a>
+      <a class="btn btn-sm btn-ghost" href="en/" hreflang="en"><span class="ms">translate</span>English</a>
     </div>
     <img src="assets/quantum-mark.svg" alt="" width="28" height="28">
     <span>Quantum Linux · Como Windows, pero mejor. Hecho con la comunidad.</span>

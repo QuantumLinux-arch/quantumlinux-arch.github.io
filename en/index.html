@@ -1,0 +1,232 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+  <script>
+  (function(){var d=document.documentElement,t;try{t=localStorage.getItem("ql-theme")}catch(e){}
+  if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
+  d.dataset.theme=t;
+  function dev(){var w=innerWidth;d.dataset.device=w<=760?"mobile":"desktop"}
+  dev();addEventListener("resize",dev)})();
+  </script>
+  <title>Quantum Linux · An Arch-based distro for gamers and Windows switchers</title>
+  <meta name="description" content="Quantum Linux 1.0 «Quark» is a free, ad-free Arch Linux based distribution with its own desktop (Quantum Shell on Wayfire), made for people coming from Windows and for gaming.">
+  <meta name="theme-color" content="#6A5CFF">
+  <meta property="og:type" content="website">
+  <meta property="og:title" content="Quantum Linux">
+  <meta property="og:description" content="An Arch-based distro for gamers and Windows switchers. Free and ad-free.">
+  <meta property="og:image" content="https://quantumlinux-arch.github.io/assets/og.jpg">
+  <meta property="og:url" content="https://quantumlinux-arch.github.io/en/">
+  <link rel="canonical" href="https://quantumlinux-arch.github.io/en/">
+  <link rel="alternate" hreflang="es" href="https://quantumlinux-arch.github.io/">
+  <link rel="alternate" hreflang="en" href="https://quantumlinux-arch.github.io/en/">
+  <link rel="alternate" hreflang="x-default" href="https://quantumlinux-arch.github.io/en/">
+  <link rel="icon" type="image/png" href="../assets/favicon.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block">
+  <link rel="stylesheet" href="../styles.css">
+  <link rel="stylesheet" href="../enhance.css">
+  <link rel="stylesheet" href="../extra.css">
+</head>
+<body>
+  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+
+  <header class="nav" id="nav">
+    <a class="brand" href="#home" aria-label="Quantum Linux, home">
+      <img src="../assets/quantum-mark.svg" alt="" width="36" height="36">
+      <span>Quantum <b>Linux</b></span>
+    </a>
+    <nav class="links" id="links">
+      <a href="#about">About</a>
+      <a href="#specs">Specs</a>
+      <a href="#download">Download</a>
+      <a href="#changelog">Changelog</a>
+      <a href="#support">Support</a>
+      <a class="lang" href="../" hreflang="es" lang="es" title="Versión en español">ES</a>
+    </nav>
+    <a class="btn btn-sm btn-grad" href="#download">Download</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">
+      <span class="ms">menu</span>
+    </button>
+  </header>
+
+  <main>
+    <section class="hero" id="home">
+      <div class="hero-text">
+        <span class="pill">Quantum Linux 1.0 «Quark» · Beta</span>
+        <h1>Beautiful, fast and ready to play.</h1>
+        <p class="motto">Like Windows, but better. <span class="grad">Built with the community.</span></p>
+        <p class="lead">Quantum Linux is a free, ad-free distribution based on <b>Arch Linux</b>, with its own desktop and apps, designed for people coming from Windows and for gaming. The interface and its own apps are in Spanish.</p>
+        <div class="cta">
+          <a class="btn btn-grad" href="#download"><span class="ms">download</span>Download ISO</a>
+          <a class="btn btn-ghost" href="#specs"><span class="ms">list_alt</span>Specs</a>
+        </div>
+        <p class="tiny">3.7 GB ISO · x86_64 · No accounts, no sign-ups</p>
+      </div>
+      <div class="hero-shot">
+        <div class="monitor">
+          <img src="../assets/img/store.webp" alt="Quantum Linux desktop with Quantum Store open and the taskbar at the bottom" width="1600" height="900">
+        </div>
+      </div>
+    </section>
+
+    <section class="section" id="about">
+      <h2>What is <span class="grad">Quantum</span>?</h2>
+      <p class="sub">The good parts of Linux, without the hard parts.</p>
+      <div class="cards">
+        <article class="card">
+          <span class="icon ms">desktop_windows</span>
+          <h3>Familiar for Windows users</h3>
+          <p>Quantum Shell, our own desktop: taskbar, Start menu and the usual shortcuts. A Windows tool («Pasar a Quantum») brings your files, wallpaper, Wi-Fi networks and bookmarks over, and .exe files open with a double click.</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">sports_esports</span>
+          <h3>Made for gaming</h3>
+          <p>Zen kernel, Steam with Proton, Proton-GE, MangoHud and GameMode out of the box. Fotón gathers your Steam, Epic, GOG and Windows games in one library.</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">storefront</span>
+          <h3>One store for everything</h3>
+          <p>Quantum Store searches the Arch repositories, Flathub and the AUR from a single place.</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">history</span>
+          <h3>Safe updates</h3>
+          <p>Btrfs with Snapper takes a system snapshot before every update; if something breaks, boot the previous snapshot from the boot menu.</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">install_desktop</span>
+          <h3>Install from Windows (beta)</h3>
+          <p>A small Windows app prepares a USB drive, downloads Quantum and installs it next to Windows unattended, with Secure Boot left on.</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">verified_user</span>
+          <h3>No ads, no surprises</h3>
+          <p>No advertising, no suggested apps and no forced reboots. Free and open source.</p>
+        </article>
+      </div>
+    </section>
+
+    <section class="section" id="specs">
+      <h2>Technical <span class="grad">specs</span></h2>
+      <div class="table-wrap">
+        <table class="compare specs">
+          <tbody>
+            <tr><td>Based on</td><td>Arch Linux (rolling release)</td></tr>
+            <tr><td>Architecture</td><td>x86_64</td></tr>
+            <tr><td>Kernel</td><td>linux-zen</td></tr>
+            <tr><td>Desktop</td><td>Quantum Shell (own, built with Quickshell/QML) on Wayfire 0.11 (Wayland)</td></tr>
+            <tr><td>Installer</td><td>Calamares 3.4 with custom branding · unattended installer for Windows (beta)</td></tr>
+            <tr><td>File system</td><td>Btrfs + Snapper + snap-pac + grub-btrfs</td></tr>
+            <tr><td>Boot</td><td>GRUB · UEFI and BIOS · Secure Boot (signed shim + machine owner key)</td></tr>
+            <tr><td>Packages</td><td>pacman (Arch repositories + signed [quantum] repository) · Flatpak/Flathub · AUR</td></tr>
+            <tr><td>Own apps</td><td>Centro Quantum (settings &amp; welcome), Quantum Store, Fotón (games), Pasar a Quantum (migration from Windows)</td></tr>
+            <tr><td>Gaming</td><td>Steam + Proton, Proton-GE, umu-launcher, MangoHud, GameMode</td></tr>
+            <tr><td>Language</td><td>Spanish interface (Latin American Spanish)</td></tr>
+            <tr><td>License</td><td>GPL-3.0-or-later for Quantum's own code</td></tr>
+          </tbody>
+        </table>
+      </div>
+    </section>
+
+    <section class="section" id="download">
+      <h2>Download</h2>
+      <div class="download" id="descargar">
+        <div class="dl-info">
+          <span class="dl-orbit"><img src="../assets/quantum-mark.svg" alt="" width="72" height="72"></span>
+          <div>
+            <h3>Quantum Linux 1.0 «Quark» <span class="beta">Beta</span></h3>
+            <p>Released 2026-10-25 · x86_64 · Arch Linux · linux-zen · Quantum Shell</p>
+          </div>
+        </div>
+        <a class="btn btn-grad big" href="https://sourceforge.net/projects/quantum-linux/files/1.0/quantumlinux-1.0-2026.10.25-x86_64.iso/download"><span class="ms">download</span>Download ISO (3.7 GB)</a>
+        <ul class="dl-chips"><li>quantumlinux-1.0-2026.10.25-x86_64.iso</li><li>UEFI &amp; BIOS</li><li>Secure Boot</li><li>Live session</li></ul>
+        <p class="tiny">Direct download from <a href="https://sourceforge.net/projects/quantum-linux/files/1.0/" target="_blank" rel="noopener">SourceForge</a> (all releases with their SHA256 files).</p>
+        <p class="tiny sha">SHA256: <code>7a817be2f50163965aa75b6cc8ac522f2bf24fc7b305415c7698cf33f61d0f71</code></p>
+      </div>
+      <div class="reqs">
+        <h3>Requirements</h3>
+        <ul>
+          <li><span class="ms">memory</span>64-bit CPU</li>
+          <li><span class="ms">memory_alt</span>4 GB RAM (8 GB recommended)</li>
+          <li><span class="ms">hard_drive</span>40 GB disk</li>
+          <li><span class="ms">usb</span>8 GB USB drive</li>
+        </ul>
+        <p class="tiny">Write the ISO with <a href="https://www.ventoy.net/" target="_blank" rel="noopener">Ventoy</a>, <a href="https://etcher.balena.io/" target="_blank" rel="noopener">balenaEtcher</a> or <a href="https://rufus.ie/" target="_blank" rel="noopener">Rufus</a>, boot it, try the live session and click «Instalar Quantum». Or use the <a href="../descargas/Instalar-Quantum.exe">Windows installer (beta)</a>.</p>
+      </div>
+    </section>
+
+    <section class="section" id="changelog">
+      <h2>Changelog</h2>
+      <ol class="changelog">
+        <li>
+          <time datetime="2026-10-25">2026-10-25</time>
+          <h3>New ISO and install from Windows <span class="beta">Beta</span></h3>
+          <ul>
+            <li>Windows installer: prepares a USB drive, downloads Quantum and installs it next to Windows unattended.</li>
+            <li>Secure Boot support without disabling anything (signed shim and a per-machine key).</li>
+            <li>«Pasar a Quantum»: migrate files, wallpaper, Wi-Fi and bookmarks from Windows.</li>
+            <li>New desktop animations, a new login screen and fixes for Bluetooth headsets and the auto-hide taskbar.</li>
+          </ul>
+        </li>
+        <li>
+          <time datetime="2026-10-22">2026-10-22</time>
+          <h3>Beta fixes</h3>
+          <ul>
+            <li>Fixes reported by the first testers and faster boot.</li>
+            <li>Fotón gains a store of free games and runs Windows games with Proton-GE.</li>
+          </ul>
+        </li>
+        <li>
+          <time datetime="2026-10-20">2026-10-20</time>
+          <h3>Quantum Linux 1.0 «Quark»</h3>
+          <ul><li>First public release (beta).</li></ul>
+        </li>
+      </ol>
+    </section>
+
+    <section class="section" id="support">
+      <h2>Support &amp; <span class="grad">community</span></h2>
+      <div class="cards">
+        <article class="card">
+          <span class="icon ms">bug_report</span>
+          <h3>Report a bug</h3>
+          <p><a href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener">Open an issue on GitHub</a> (English or Spanish).</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">forum</span>
+          <h3>Get help</h3>
+          <p>Join the <a href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener">Quantum Discord server</a>.</p>
+        </article>
+        <article class="card">
+          <span class="icon ms">code</span>
+          <h3>Source &amp; packages</h3>
+          <p>Everything is on <a href="https://github.com/QuantumLinux-arch" target="_blank" rel="noopener">GitHub</a>, including the signed [quantum] package repository.</p>
+        </article>
+      </div>
+      <p class="tiny center">Built on free software: Arch Linux, Wayfire, Quickshell, Calamares, matugen, Papirus, Material Symbols, Inter, Waydroid and CachyOS.</p>
+    </section>
+  </main>
+
+  <footer class="footer">
+    <div class="foot-links">
+      <a class="btn btn-sm btn-dark" href="https://www.tiktok.com/@quantum.os" target="_blank" rel="noopener"><span class="ms">smart_display</span>TikTok</a>
+      <a class="btn btn-sm btn-ghost" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><span class="ms">forum</span>Discord</a>
+      <a class="btn btn-sm btn-ghost" href="https://github.com/QuantumLinux-arch" target="_blank" rel="noopener"><span class="ms">code</span>GitHub</a>
+      <a class="btn btn-sm btn-ghost" href="../" hreflang="es"><span class="ms">translate</span>Español</a>
+    </div>
+    <img src="../assets/quantum-mark.svg" alt="" width="28" height="28">
+    <span>Quantum Linux · Like Windows, but better. Built with the community.</span>
+    <span class="tiny">Not affiliated with Microsoft or Arch Linux.</span>
+  </footer>
+
+  <script>
+  (function(){var t=document.getElementById("menuToggle"),l=document.getElementById("links");
+  t.addEventListener("click",function(){var o=l.classList.toggle("open");t.setAttribute("aria-expanded",o)});
+  l.addEventListener("click",function(e){if(e.target.tagName==="A")l.classList.remove("open")})})();
+  </script>
+</body>
+</html>

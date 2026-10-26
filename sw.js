@@ -1,7 +1,7 @@
 // Quantum Linux — caché para que cargue al instante y funcione sin conexión.
 // La página (HTML) siempre se pide primero a internet: así el enlace del ISO y el SHA256 nunca
 // quedan viejos. Lo demás (estilos, scripts, imágenes) sale de la caché y se actualiza de fondo.
-const VERSION = "quantum-v3", CORE = ["./", "index.html", "styles.css", "enhance.css", "extra.css", "main.js", "enhance.js", "extra.js", "manifest.webmanifest", "assets/quantum-mark.svg", "assets/favicon.png", "assets/icon-192.png",
+const VERSION = "quantum-v4", CORE = ["./", "index.html", "styles.css", "enhance.css", "extra.css", "main.js", "enhance.js", "extra.js", "manifest.webmanifest", "assets/quantum-mark.svg", "assets/favicon.png", "assets/icon-192.png",
   "assets/img/escritorio.webp", "assets/img/inicio.webp", "assets/img/store.webp", "assets/img/ajustes.webp", "assets/img/claro.webp"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(VERSION).then((c) => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((k) => Promise.all(k.filter((n) => n !== VERSION).map((n) => caches.delete(n)))).then(() => self.clients.claim())); });

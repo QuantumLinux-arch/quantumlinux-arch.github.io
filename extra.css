@@ -152,3 +152,15 @@ html[data-device="mobile"] .to-top { right: 14px; bottom: calc(96px + env(safe-a
 .beta { display: inline-block; vertical-align: middle; margin-left: 8px; padding: 3px 10px; border-radius: 99px; font-size: 13px;
   font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #3A2600; background: #FFB547; }
 .iso-title { text-align: center; margin: 50px 0 0; font-size: 24px; }
+
+/* ---------- Idioma, ficha técnica y novedades ---------- */
+.links a.lang { border: 1px solid rgba(106, 92, 255, .35); font-weight: 800; letter-spacing: .04em; }
+.compare.specs td:first-child { font-weight: 700; white-space: nowrap; width: 1%; padding-right: 28px; }
+.changelog { list-style: none; margin: 30px auto 0; padding: 0; max-width: 860px; display: grid; gap: 18px; }
+.changelog > li { padding: 22px 26px 18px; border-radius: 22px; background: rgba(255, 255, 255, .7); border: 1px solid rgba(106, 92, 255, .18); }
+.changelog time { font-size: 13px; font-weight: 800; letter-spacing: .06em; text-transform: uppercase; color: #6A5CFF; }
+.changelog h3 { margin: 6px 0 10px; font-size: 21px; }
+.changelog ul { margin: 0; padding-left: 20px; display: grid; gap: 6px; }
+html[data-theme="dark"] .changelog > li { background: rgba(255, 255, 255, .04); }
+@media (max-width: 760px) { .compare.specs td:first-child { white-space: normal; padding-right: 12px; } }
+.download .tiny a { color: #fff; font-weight: 700; text-decoration: underline; }

@@ -1,0 +1,39 @@
+name: Reportar un error / Report a bug
+description: Algo no funciona en Quantum Linux · Something doesn't work in Quantum Linux
+labels: ["error"]
+body:
+  - type: markdown
+    attributes:
+      value: |
+        Gracias por avisar. Puedes escribir en español o en inglés. · Thanks! Spanish or English are fine.
+  - type: textarea
+    id: que
+    attributes:
+      label: ¿Qué pasó? / What happened?
+      description: Qué esperabas y qué pasó en cambio. · What you expected and what happened instead.
+    validations:
+      required: true
+  - type: textarea
+    id: pasos
+    attributes:
+      label: Pasos para que vuelva a pasar / Steps to reproduce
+      placeholder: |
+        1. Abrí Personalizar…
+        2. Activé «Ocultar automáticamente»…
+  - type: input
+    id: version
+    attributes:
+      label: Versión / Version
+      description: El ISO que usaste o la fecha de tu última actualización. · ISO you used or last update date.
+      placeholder: quantumlinux-1.0-2026.10.25
+  - type: input
+    id: pc
+    attributes:
+      label: Tu PC / Your hardware
+      description: Procesador, gráfica y RAM, o si es una máquina virtual. · CPU, GPU and RAM, or VM.
+      placeholder: Ryzen 5 5600, RX 6600, 16 GB
+  - type: textarea
+    id: extra
+    attributes:
+      label: Capturas o registros / Screenshots or logs
+      description: Arrastra aquí capturas o el resultado de un comando. · Drop screenshots or command output here.
