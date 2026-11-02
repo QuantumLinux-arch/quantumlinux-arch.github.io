@@ -48,8 +48,14 @@ html[data-theme="dark"] .blobs::after { background: #C02A9B; opacity: .3; }
   -webkit-backdrop-filter: blur(28px) saturate(1.8); backdrop-filter: blur(28px) saturate(1.8);
   border-color: var(--hi);
 }
-.nav { background: var(--glass-strong); -webkit-backdrop-filter: blur(34px) saturate(2); backdrop-filter: blur(34px) saturate(2); transition: max-width .5s var(--ease), box-shadow .4s; }
-.nav.scrolled { max-width: 1000px; box-shadow: 0 20px 55px -22px rgba(40, 25, 130, .5); }
+.nav { background: var(--glass-strong); -webkit-backdrop-filter: blur(34px) saturate(2); backdrop-filter: blur(34px) saturate(2); transition: max-width .5s var(--ease), box-shadow .4s var(--ease), gap .4s var(--ease), padding .4s var(--ease); }
+.nav.scrolled { max-width: 1000px; box-shadow: 0 20px 55px -22px rgba(40, 25, 130, .5); gap: 12px; padding: 8px 10px 8px 16px; }
+.nav.scrolled .links { gap: 2px; }
+.nav.scrolled .links a { font-size: 14px; padding: 6px 10px; }
+.nav.scrolled .brand { font-size: 17px; }
+.nav.scrolled .brand img { width: 30px; height: 30px; }
+.nav.scrolled .nav > .btn-sm,
+.nav.scrolled > .btn-sm { padding: 8px 14px; font-size: 14px; }
 .tab.active { background: var(--grad); border-color: transparent; }
 .member.founder { background: linear-gradient(var(--surface), var(--surface)) padding-box, var(--grad) border-box; }
 .links a:hover { background: rgba(106, 92, 255, .14); }
