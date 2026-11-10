@@ -3,24 +3,19 @@
 <head>
   <meta charset="utf-8">
   <meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
-  <script>
-  (function(){var d=document.documentElement,t;try{t=localStorage.getItem("ql-theme")}catch(e){}
-  if(t!=="dark"&&t!=="light")t=matchMedia("(prefers-color-scheme: dark)").matches?"dark":"light";
-  d.dataset.theme=t;
-  function dev(){var w=innerWidth,ua=/Android|iPhone|iPad|iPod|Mobile|Windows Phone/i.test(navigator.userAgent)||(navigator.platform==="MacIntel"&&navigator.maxTouchPoints>1);
-  d.dataset.device=(w<=760||(ua&&w<=1100))?"mobile":"desktop"}
-  dev();addEventListener("resize",dev);addEventListener("orientationchange",dev)})();
-  </script>
-  <title>Quantum Linux · Bonito, rápido y listo para jugar</title>
-  <meta name="description" content="Quantum Linux 1.0 «Quark»: una distro basada en Arch, gratis y sin anuncios, pensada para quienes vienen de Windows y para jugar.">
-  <meta name="theme-color" content="#6A5CFF">
+  <title>Quantum Linux 2.0 «Pulsar» · Como Windows, pero mejor</title>
+  <meta name="description" content="Quantum Linux 2.0 «Pulsar»: una distro basada en Arch, gratis y sin anuncios, pensada para quienes vienen de Windows y para jugar. Ahora con apps de Android, widgets y más.">
+  <meta name="theme-color" content="#0b0614">
   <link rel="manifest" href="manifest.webmanifest">
+  <link rel="icon" href="assets/favicon.png">
+  <link rel="icon" type="image/svg+xml" href="assets/quantum-mark.svg">
+  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <meta name="mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="apple-mobile-web-app-title" content="Quantum">
   <meta property="og:type" content="website">
-  <meta property="og:title" content="Quantum Linux">
+  <meta property="og:title" content="Quantum Linux 2.0 «Pulsar»">
   <meta property="og:description" content="Como Windows, pero mejor. Hecho con la comunidad. Gratis y sin anuncios.">
   <meta property="og:image" content="https://quantumlinux-arch.github.io/assets/og.jpg">
   <meta property="og:url" content="https://quantumlinux-arch.github.io/">
@@ -28,425 +23,285 @@
   <link rel="canonical" href="https://quantumlinux-arch.github.io/">
   <link rel="alternate" hreflang="es" href="https://quantumlinux-arch.github.io/">
   <link rel="alternate" hreflang="en" href="https://quantumlinux-arch.github.io/en/">
-  <link rel="alternate" hreflang="x-default" href="https://quantumlinux-arch.github.io/en/">
-  <link rel="icon" type="image/png" href="assets/favicon.png">
-  <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800;900&display=swap">
-  <link rel="stylesheet" href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL,GRAD@24,500,1,0&display=block">
-  <link rel="stylesheet" href="styles.css">
-  <link rel="stylesheet" href="enhance.css">
-  <link rel="stylesheet" href="extra.css">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@200;400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Material+Symbols+Rounded:opsz,wght,FILL@20..48,400,0..1&display=block" rel="stylesheet">
+  <link rel="preload" as="image" href="assets/pulsar-poster.jpg">
+  <link rel="stylesheet" href="pulsar.css">
 </head>
 <body>
-  <div class="blobs" aria-hidden="true"><span></span><span></span><span></span></div>
+<a class="skip" href="#nuevo">Saltar al contenido</a>
 
-  <header class="nav" id="nav">
-    <a class="brand" href="#inicio" aria-label="Quantum Linux, inicio">
-      <img src="assets/quantum-mark.svg" alt="" width="36" height="36">
-      <span>Quantum <b>Linux</b></span>
-    </a>
-    <nav class="links" id="links">
-      <a href="#por-que">Por qué</a>
-      <a href="#capturas">Capturas</a>
-      <a href="#instalar">Instalar</a>
-      <a href="#desde-windows">Desde Windows</a>
-      <a href="#novedades">Novedades</a>
-      <a href="#ayuda">Ayuda</a>
-      <a href="#creditos">Créditos</a>
-      <a class="lang" href="en/" hreflang="en" lang="en" title="English version">EN</a>
-    </nav>
-    <a class="btn btn-sm btn-grad" href="#descargar">Descargar</a>
-    <button class="menu-toggle" id="menuToggle" aria-label="Abrir menú" aria-expanded="false">
-      <span class="ms">menu</span>
-    </button>
-  </header>
+<nav class="top"><div class="wrap">
+  <a class="brand" href="#"><img src="assets/quantum-mark.svg" alt="">Quantum Linux</a>
+  <ul>
+    <li><a href="#nuevo">Novedades</a></li>
+    <li><a href="#capturas">Capturas</a></li>
+    <li><a href="#instalar">Instalar</a></li>
+    <li><a href="#desde-windows">Desde Windows</a></li>
+    <li><a href="#ayuda">Ayuda</a></li>
+    <li><a href="#creditos">Créditos</a></li>
+    <li><a href="en/" hreflang="en" lang="en">EN</a></li>
+  </ul>
+  <a class="btn primary small" href="#instalar"><span class="ms">download</span>Descargar</a>
+  <button class="menu-btn" type="button" aria-label="Menú"><span class="ms">menu</span></button>
+</div></nav>
 
-  <main>
-    <!-- Portada -->
-    <section class="hero" id="inicio">
-      <div class="hero-text">
-        <span class="pill">Nuevo · Quantum Linux 1.0 «Quark»</span>
-        <h1 class="kinetic" data-text="Bonito, rápido y listo para jugar."></h1>
-        <p class="motto">Como Windows, pero mejor. <span class="grad">Hecho con la comunidad.</span></p>
-        <p class="lead">Una distro basada en Arch Linux, gratis y sin anuncios, pensada para quienes vienen de Windows. Instala, juega y personaliza sin pelear con tu PC.</p>
-        <div class="cta">
-          <a class="btn btn-grad" href="#descargar"><span class="ms">download</span>Descargar gratis</a>
-          <a class="btn btn-ghost" href="#capturas"><span class="ms">photo_library</span>Ver capturas</a>
-        </div>
-        <p class="tiny">ISO de 3,7 GB · 64 bits · Sin cuentas ni registros</p>
-      </div>
-      <div class="hero-shot reveal">
-        <div class="monitor">
-          <img src="assets/img/store.webp" alt="Escritorio de Quantum Linux con Quantum Store abierta y la barra de tareas abajo" width="1600" height="900">
-        </div>
-        <div class="float-chip c1"><span class="ms">sports_esports</span>Steam y Proton listos</div>
-        <div class="float-chip c2"><span class="ms">palette</span>Colores de tu fondo</div>
-        <div class="float-chip c3"><span class="ms">block</span>Sin anuncios</div>
-      </div>
-    </section>
-
-    <!-- Por qué -->
-    <section class="section" id="por-que">
-      <h2 class="reveal">¿Por qué <span class="grad">Quantum</span>?</h2>
-      <p class="sub reveal">Todo lo bueno de Linux, sin la parte difícil.</p>
-      <div class="cards">
-        <article class="card reveal">
-          <span class="icon ms">sports_esports</span>
-          <h3>Hecho para jugar</h3>
-          <p>Steam con Proton listo, kernel Zen, modo juego y Fotón: todos tus juegos de Steam, Epic, GOG y Windows en un solo lugar.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">desktop_windows</span>
-          <h3>Fácil si vienes de Windows</h3>
-          <p>Barra de tareas, menú Inicio y los atajos de siempre. Los .exe se abren con doble clic y te traes tus cosas desde un pendrive.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">storefront</span>
-          <h3>Quantum Store</h3>
-          <p>Una sola tienda para todo: los repos de Arch, Flathub y AUR. Buscas, haces clic y listo.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">palette</span>
-          <h3>Tu estilo, al instante</h3>
-          <p>Modo claro u oscuro y colores que se adaptan a tu fondo en todo el sistema. Sin reiniciar nada.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">verified_user</span>
-          <h3>Sin anuncios ni sorpresas</h3>
-          <p>Nada de publicidad ni apps «sugeridas», ni reinicios forzados. Las actualizaciones las decides tú.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">history</span>
-          <h3>Vuelve atrás si algo falla</h3>
-          <p>Antes de cada actualización se guarda una copia del sistema. Si algo sale mal, eliges la anterior al arrancar.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Capturas -->
-    <section class="section" id="capturas">
-      <h2 class="reveal">Así se <span class="grad">ve</span></h2>
-      <p class="sub reveal">Capturas reales de Quantum Linux 1.0.</p>
-      <div class="tabs reveal" role="tablist">
-        <button class="tab active" role="tab" data-shot="escritorio" aria-selected="true">Escritorio</button>
-        <button class="tab" role="tab" data-shot="inicio" aria-selected="false">Menú Inicio</button>
-        <button class="tab" role="tab" data-shot="store" aria-selected="false">Quantum Store</button>
-        <button class="tab" role="tab" data-shot="ajustes" aria-selected="false">Ajustes</button>
-        <button class="tab" role="tab" data-shot="claro" aria-selected="false">Modo claro</button>
-      </div>
-      <div class="gallery reveal">
-        <div class="monitor big">
-          <img id="shot" src="assets/img/escritorio.webp" alt="Captura de Quantum Linux" width="1600" height="900">
-        </div>
-        <p class="caption" id="caption">El escritorio limpio, con la barra de tareas flotante abajo.</p>
-      </div>
-    </section>
-
-    <!-- Comparación -->
-    <section class="section" id="comparacion">
-      <h2 class="reveal">Windows 11 vs <span class="grad">Quantum</span></h2>
-      <div class="table-wrap reveal">
-        <table class="compare">
-          <thead>
-            <tr><th></th><th>Windows 11</th><th class="q">Quantum Linux</th></tr>
-          </thead>
-          <tbody>
-            <tr><td>Precio</td><td>Licencia de pago</td><td class="q"><span class="ms ok">check_circle</span>Gratis</td></tr>
-            <tr><td>Anuncios y apps sugeridas</td><td>Sí, en el menú Inicio</td><td class="q"><span class="ms ok">check_circle</span>Ninguno</td></tr>
-            <tr><td>Pide TPM 2.0 y CPU reciente</td><td>Sí</td><td class="q"><span class="ms ok">check_circle</span>No</td></tr>
-            <tr><td>Reinicios por actualizaciones</td><td>Automáticos</td><td class="q"><span class="ms ok">check_circle</span>Cuando tú quieras</td></tr>
-            <tr><td>Cuenta obligatoria al instalar</td><td>Cuenta de Microsoft</td><td class="q"><span class="ms ok">check_circle</span>No</td></tr>
-            <tr><td>Código abierto</td><td>No</td><td class="q"><span class="ms ok">check_circle</span>Sí</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Descargar e instalar -->
-    <section class="section" id="instalar">
-      <h2 class="reveal">Instala <span class="grad">Quantum</span></h2>
-      <p class="sub reveal">Dos formas: desde Windows, sin tocar la BIOS, o con el ISO como siempre.</p>
-
-      <div class="download wininst reveal" id="desde-windows-instalar">
-        <div class="dl-info">
-          <span class="dl-orbit"><span class="ms" style="font-size:44px">install_desktop</span></span>
-          <div>
-            <h3>Desde Windows <span class="beta">Beta</span></h3>
-            <p>Lo abres, respondes unas preguntas y conectas un pendrive. Quantum se descarga, se instala solo junto a Windows (o en su lugar) y se lleva tus archivos.</p>
-          </div>
-        </div>
-        <a class="btn btn-grad big" href="descargas/Instalar-Quantum.exe" download="Instalar Quantum.exe"><span class="ms">download</span>Descargar instalador</a>
-        <ul class="dl-chips"><li>Windows 10 y 11</li><li>8 MB</li><li>Pendrive de 8 GB</li></ul>
-        <p class="tiny">Es una versión beta: respalda antes tus archivos importantes. Si Windows dice «Windows protegió tu PC», toca «Más información» y luego «Ejecutar de todas formas».</p>
-      </div>
-
-      <h3 class="iso-title reveal">Con el ISO</h3>
-      <ol class="steps">
-        <li class="step reveal"><span class="num">1</span><h3>Descarga</h3><p>Baja el ISO de Quantum Linux (3,7 GB).</p></li>
-        <li class="step reveal"><span class="num">2</span><h3>Graba un USB</h3><p>Usa <a href="https://www.ventoy.net/" target="_blank" rel="noopener">Ventoy</a>, <a href="https://etcher.balena.io/" target="_blank" rel="noopener">balenaEtcher</a> o <a href="https://rufus.ie/" target="_blank" rel="noopener">Rufus</a> con un USB de 8 GB o más.</p></li>
-        <li class="step reveal"><span class="num">3</span><h3>Arranca e instala</h3><p>Inicia el PC desde el USB, pruébalo sin instalar y luego pulsa «Instalar Quantum».</p></li>
-      </ol>
-
-      <div class="download reveal" id="descargar">
-        <div class="dl-info">
-          <span class="dl-orbit"><img src="assets/quantum-mark.svg" alt="" width="72" height="72"></span>
-          <div>
-            <h3>Quantum Linux 1.0 «Quark» <span class="beta">Beta</span></h3>
-            <p>Versión del 31 de octubre de 2026 · x86_64 · Arch Linux · Kernel Zen · Quantum Shell</p>
-          </div>
-        </div>
-        <a class="btn btn-grad big" id="downloadBtn" href="#descargar"><span class="ms">download</span>Descargar ISO</a>
-        <ul class="dl-chips"><li>quantumlinux-1.0-2026.10.31-x86_64.iso</li><li>3,7 GB</li><li>UEFI y BIOS</li><li>Arranque seguro</li></ul>
-        <p class="tiny" id="dlNote">Descarga directa desde <a href="https://sourceforge.net/projects/quantum-linux/files/1.0/" target="_blank" rel="noopener">SourceForge</a> (todas las versiones y sus sumas SHA256).</p>
-        <p class="tiny sha">SHA256: <code>063c57d1206a77a19799976996d016ba2bc9336c10f5f415ff3ec1671ba168d5</code><button class="copy" type="button" data-copy="063c57d1206a77a19799976996d016ba2bc9336c10f5f415ff3ec1671ba168d5" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
-      </div>
-
-      <div class="reqs reveal">
-        <h3>Requisitos</h3>
-        <ul>
-          <li><span class="ms">memory</span>Procesador de 64 bits</li>
-          <li><span class="ms">memory_alt</span>4 GB de RAM (8 GB recomendado)</li>
-          <li><span class="ms">hard_drive</span>40 GB de disco</li>
-          <li><span class="ms">usb</span>USB de 8 GB para instalar</li>
-        </ul>
-        <p class="tiny">Antes de instalar, respalda tus archivos importantes.</p>
-      </div>
-
-    </section>
-
-    <!-- Desde Windows -->
-    <section class="section" id="desde-windows">
-      <h2 class="reveal">Trae tus cosas de <span class="grad">Windows</span></h2>
-      <p class="sub reveal">Tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam, en Quantum en minutos.</p>
-      <ol class="steps">
-        <li class="step reveal"><span class="num">1</span><h3>En Windows</h3><p>Descarga «Pasar a Quantum» y ábrelo. No se instala.</p></li>
-        <li class="step reveal"><span class="num">2</span><h3>Copia a un pendrive</h3><p>Elige qué llevar y se copia todo con un clic.</p></li>
-        <li class="step reveal"><span class="num">3</span><h3>Conéctalo en Quantum</h3><p>Quantum lo detecta y deja cada cosa en su lugar.</p></li>
-      </ol>
-      <div class="download migrate reveal" id="pasar-a-quantum">
-        <div class="dl-info">
-          <span class="dl-orbit"><span class="ms" style="font-size:44px">move_to_inbox</span></span>
-          <div>
-            <h3>Pasar a Quantum</h3>
-            <p>Para Windows 10 y 11 · 6 MB · No se instala</p>
-          </div>
-        </div>
-        <a class="btn btn-grad big" href="descargas/Pasar-a-Quantum.exe" download="Pasar a Quantum.exe"><span class="ms">download</span>Descargar para Windows</a>
-        <p class="tiny">Si Windows dice «Windows protegió tu PC», toca «Más información» y luego «Ejecutar de todas formas».</p>
-        <p class="tiny sha">SHA256: <code>6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03</code><button class="copy" type="button" data-copy="6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
-      </div>
-    </section>
-
-    <!-- Ficha técnica -->
-    <section class="section" id="ficha">
-      <h2 class="reveal">Ficha <span class="grad">técnica</span></h2>
-      <p class="sub reveal">Lo que hay debajo, para los curiosos.</p>
-      <div class="table-wrap reveal">
-        <table class="compare specs">
-          <tbody>
-            <tr><td>Basada en</td><td>Arch Linux (actualización continua)</td></tr>
-            <tr><td>Arquitectura</td><td>x86_64 (64 bits)</td></tr>
-            <tr><td>Kernel</td><td>linux-zen</td></tr>
-            <tr><td>Escritorio</td><td>Quantum Shell (propio, hecho con Quickshell/QML) sobre Wayfire 0.11 (Wayland)</td></tr>
-            <tr><td>Instalador</td><td>Calamares 3.4 con diseño propio · instalador para Windows (beta)</td></tr>
-            <tr><td>Sistema de archivos</td><td>Btrfs con Snapper: copia del sistema antes de cada actualización</td></tr>
-            <tr><td>Arranque</td><td>GRUB · UEFI y BIOS · arranque seguro (shim firmado + llave propia)</td></tr>
-            <tr><td>Paquetes</td><td>pacman (repos de Arch y repo propio [quantum], firmado) · Flatpak/Flathub · AUR</td></tr>
-            <tr><td>Apps propias</td><td>Centro Quantum, Quantum Store, Fotón (juegos), Pasar a Quantum</td></tr>
-            <tr><td>Juegos</td><td>Steam con Proton, Proton-GE, umu, MangoHud, GameMode</td></tr>
-            <tr><td>Idioma</td><td>Español (interfaz y apps propias)</td></tr>
-            <tr><td>Licencia</td><td>GPL-3.0 (código propio) · software libre</td></tr>
-          </tbody>
-        </table>
-      </div>
-    </section>
-
-    <!-- Novedades -->
-    <section class="section" id="novedades">
-      <h2 class="reveal"><span class="grad">Novedades</span></h2>
-      <p class="sub reveal">Quantum se actualiza seguido: las mejoras llegan solas con «Actualizar».</p>
-      <ol class="changelog">
-        <li class="reveal">
-          <time datetime="2026-10-31">31 oct 2026</time>
-          <h3>Bienvenida completa, Archivos y fondos animados <span class="beta">Beta</span></h3>
-          <ul>
-            <li>La bienvenida ahora tiene 5 pasos: estilo, colores y fondo, Quantum Shell, sonidos (7 estilos nuevos para escuchar antes de elegir) e íconos (Tela, Fluent, WhiteSur, Colloid y Candy).</li>
-            <li>Archivos: el nuevo explorador de Quantum, fácil como el de Windows, con pestañas, miniaturas, copias con progreso y búsqueda.</li>
-            <li>Fondos animados: videos y GIF como fondo, con tres propios de Quantum; se pausan solos al jugar.</li>
-            <li>Al instalar con internet, Quantum se actualiza solo a la última versión antes de terminar.</li>
-            <li>Aviso para reiniciar después de actualizar, y Serpantium con dock abajo y cambio fácil a Caelestial.</li>
-          </ul>
-        </li>
-        <li class="reveal">
-          <time datetime="2026-10-30">30 oct 2026</time>
-          <h3>Elige tu Quantum Shell, luz nocturna e instalador más rápido <span class="beta">Beta</span></h3>
-          <ul>
-            <li>Nueva bienvenida al primer inicio: elige el estilo del escritorio (Windows, Quantum, macOS o Minimal), tus colores y tu fondo.</li>
-            <li>Serpantium, la nueva forma de Quantum Shell: barra de píldoras, paneles oscuros y tonos rosados. Inspirado en Serpantinum de ilyamiro.</li>
-            <li>Personalizar → Pantalla: luz nocturna (manual, al atardecer o en un horario), brillo, contraste, gamma y saturación.</li>
-            <li>Personalizar → Mouse y touchpad: velocidad, aceleración, desplazamiento natural, tocar para hacer clic y más, sin tocar archivos.</li>
-            <li>El instalador ya no se queda pegado al abrirlo con internet lento.</li>
-            <li>Barra de tareas: arrastra los íconos para reordenarlos. Íconos nuevos para Quantum Store, el Asistente y Personalizar.</li>
-          </ul>
-        </li>
-        <li class="reveal">
-          <time datetime="2026-10-25">25 oct 2026</time>
-          <h3>ISO nuevo e instalar desde Windows <span class="beta">Beta</span></h3>
-          <ul>
-            <li>Instalador para Windows: prepara el pendrive, descarga Quantum y lo instala solo junto a Windows.</li>
-            <li>Arranque seguro sin desactivar nada (shim firmado y llave propia de cada PC).</li>
-            <li>«Pasar a Quantum»: tus archivos, fondo, Wi-Fi y favoritos de Windows, en Quantum.</li>
-            <li>Nuevas animaciones: panel que baja al pasar el mouse, menú de apagado, volumen, notificaciones y cambio de fondo.</li>
-            <li>Pantalla de inicio de sesión nueva, igual a la de bloqueo.</li>
-            <li>Arreglos: audífonos Bluetooth que no conectaban y barra de tareas que dejaba de responder.</li>
-          </ul>
-        </li>
-        <li class="reveal">
-          <time datetime="2026-10-22">22 oct 2026</time>
-          <h3>Arreglos de la beta</h3>
-          <ul>
-            <li>Correcciones reportadas por los primeros testers y arranque más rápido.</li>
-            <li>Fotón con una tienda de juegos gratis y juegos de Windows con Proton-GE.</li>
-          </ul>
-        </li>
-        <li class="reveal">
-          <time datetime="2026-10-20">20 oct 2026</time>
-          <h3>Quantum Linux 1.0 «Quark»</h3>
-          <ul>
-            <li>Primera versión pública (beta): Quantum Shell, Centro Quantum, Quantum Store y Fotón.</li>
-          </ul>
-        </li>
-      </ol>
-    </section>
-
-    <!-- Ayuda -->
-    <section class="section" id="ayuda">
-      <h2 class="reveal">Ayuda y <span class="grad">documentación</span></h2>
-      <p class="sub reveal">Lo básico para instalar, mantener y pedir ayuda.</p>
-      <div class="cards">
-        <article class="card reveal">
-          <span class="icon ms">install_desktop</span>
-          <h3>Instalar</h3>
-          <p>Desde Windows con el instalador, o grabando el ISO en un USB y eligiendo «Instalar Quantum» en la sesión de prueba. Ver <a href="#instalar">Instala Quantum</a>.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">system_update</span>
-          <h3>Actualizar</h3>
-          <p>Toca el aviso de actualizaciones en la barra o «Actualizar» en el Centro Quantum. Se actualizan el sistema y las apps de una vez.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">history</span>
-          <h3>Volver atrás</h3>
-          <p>Si una actualización falla, al encender elige la copia anterior del sistema en el menú de arranque.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">bug_report</span>
-          <h3>Reportar un error</h3>
-          <p>Cuéntanos qué pasó y en qué PC: <a href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener">abrir un reporte en GitHub</a>.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">forum</span>
-          <h3>Pedir ayuda</h3>
-          <p>La comunidad responde en el <a href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener">Discord de Quantum</a>.</p>
-        </article>
-        <article class="card reveal">
-          <span class="icon ms">code</span>
-          <h3>Código y paquetes</h3>
-          <p>El proyecto y su repo de paquetes [quantum] (firmado) están en <a href="https://github.com/QuantumLinux-arch" target="_blank" rel="noopener">GitHub</a>.</p>
-        </article>
-      </div>
-    </section>
-
-    <!-- Preguntas -->
-    <section class="section" id="preguntas">
-      <h2 class="reveal">Preguntas <span class="grad">frecuentes</span></h2>
-      <div class="faq">
-        <details class="reveal"><summary>¿Puedo traer mis cosas de Windows?</summary><p>Sí. Con «Pasar a Quantum» copias en Windows tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam a un pendrive. Al conectarlo en Quantum, todo va a su lugar. Lo descargas en la sección «Trae tus cosas de Windows».</p></details>
-        <details class="reveal"><summary>¿Tengo que entrar a la BIOS para instalar?</summary><p>No, si usas el instalador para Windows: prepara el pendrive y reinicia el PC solo. Solo verás una pantalla azul la primera vez, para que tu PC confíe en Quantum con el arranque seguro activado; el instalador te explica qué tocar.</p></details>
-        <details class="reveal"><summary>¿Es gratis de verdad?</summary><p>Sí. Quantum Linux es gratis y de código abierto. No hay versión de pago, ni suscripciones, ni anuncios.</p></details>
-        <details class="reveal"><summary>¿Funcionan mis juegos de Windows?</summary><p>Muchísimos sí, gracias a Steam y Proton. Algunos juegos con antitrampas (como Valorant) todavía no funcionan en Linux. Puedes revisar cada juego en <a href="https://www.protondb.com/" target="_blank" rel="noopener">ProtonDB</a>.</p></details>
-        <details class="reveal"><summary>¿Necesito saber usar la terminal?</summary><p>No. Instalas apps desde Quantum Store, cambias ajustes desde el Centro Quantum y actualizas con un botón.</p></details>
-        <details class="reveal"><summary>¿Puedo probarlo sin instalar?</summary><p>Sí. Al arrancar desde el USB entras a una sesión de prueba completa; nada cambia en tu PC hasta que pulsas «Instalar Quantum».</p></details>
-      </div>
-    </section>
-
-    <!-- Créditos -->
-    <section class="section credits" id="creditos">
-      <h2 class="reveal">Hecho con la <span class="grad">comunidad</span></h2>
-      <p class="sub reveal">Quantum Linux existe gracias a estas personas.</p>
-
-      <div class="team">
-        <article class="member reveal founder">
-          <div class="avatar"><img src="assets/quantum-mark.svg" alt="" width="64" height="64"></div>
-          <h3>@quantum.os</h3>
-          <span class="role">Creador del proyecto</span>
-          <p>Idea, diseño y desarrollo de Quantum Linux.</p>
-        </article>
-        <article class="member reveal">
-          <div class="avatar photo"><img src="assets/img/lauty.webp" alt="Foto de perfil de Lauty" width="96" height="96" loading="lazy"></div>
-          <h3>Lauty</h3>
-          <span class="role">Multiusos</span>
-          <p>Primer colaborador oficial. Creó el Discord de Quantum y ayuda en todo lo que haga falta.</p>
-        </article>
-        <article class="member reveal">
-          <div class="avatar photo"><img src="assets/img/interactive-proyects.webp" alt="Foto de perfil de Interactive proyects" width="96" height="96" loading="lazy"></div>
-          <h3>Interactive proyects</h3>
-          <span class="role">Diseño web</span>
-          <p>Mejoró esta página: modo oscuro, animaciones y una versión más cómoda para celular.</p>
-        </article>
-        <article class="member reveal">
-          <div class="avatar photo"><img src="assets/img/ilyamiro.webp" alt="Foto de perfil de ilyamiro" width="96" height="96" loading="lazy"></div>
-          <h3>ilyamiro</h3>
-          <span class="role">Inspiró Serpantium</span>
-          <p>Creador de Serpantinum, el escritorio que inspiró a Serpantium. Gracias por compartir su trabajo (@ilyamiro.dev).</p>
-        </article>
-      </div>
-
-      <div class="thanks reveal">
-        <span class="ms">favorite</span>
-        <p><b>Y a todos los que comentan, prueban y comparten.</b> Cada idea que dejan en TikTok ayuda a decidir qué llega en la próxima versión.</p>
-      </div>
-
-      <h3 class="oss-title reveal">Construido sobre software libre</h3>
-      <div class="oss reveal">
-        <a href="https://archlinux.org" target="_blank" rel="noopener">Arch Linux</a>
-        <a href="https://wayfire.org" target="_blank" rel="noopener">Wayfire</a>
-        <a href="https://quickshell.org" target="_blank" rel="noopener">Quickshell</a>
-        <a href="https://calamares.io" target="_blank" rel="noopener">Calamares</a>
-        <a href="https://github.com/InioX/matugen" target="_blank" rel="noopener">matugen</a>
-        <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme" target="_blank" rel="noopener">Papirus</a>
-        <a href="https://fonts.google.com/icons" target="_blank" rel="noopener">Material Symbols</a>
-        <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a>
-        <a href="https://cachyos.org" target="_blank" rel="noopener">CachyOS</a>
-      </div>
-      <a class="promo-line reveal" href="https://emprepage.dev/" target="_blank" rel="sponsored noopener" aria-label="Recomendado: EmprePage">
-        <img src="assets/promo/emprepage.webp" alt="" width="180" height="90" loading="lazy">
-        <span><span class="promo-tag">Recomendado</span><b>EmprePage</b> · Crea la web de tu emprendimiento en minutos</span>
-        <span class="ms">open_in_new</span>
-      </a>
-      <p class="tiny center reveal">¿Quieres colaborar? Únete al <a href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener">Discord de Quantum</a>.</p>
-    </section>
-
-  </main>
-
-  <footer class="footer" id="comunidad">
-    <div class="foot-links">
-      <a class="btn btn-sm btn-dark" id="tiktokLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">smart_display</span>TikTok</a>
-      <a class="btn btn-sm btn-ghost" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><span class="ms">forum</span>Discord</a>
-      <a class="btn btn-sm btn-ghost" id="githubLink" href="#comunidad" target="_blank" rel="noopener"><span class="ms">code</span>GitHub</a>
-      <a class="btn btn-sm btn-ghost" href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener"><span class="ms">bug_report</span>Reportar un error</a>
-      <a class="btn btn-sm btn-ghost" href="en/" hreflang="en"><span class="ms">translate</span>English</a>
+<header class="hero" id="inicio">
+  <div class="bg" data-video="assets/pulsar.mp4"><img src="assets/pulsar-poster.jpg" alt=""></div>
+  <div class="wrap">
+    <span class="pill"><span class="dot"></span>Nuevo · Quantum Linux 2.0 «Pulsar»</span>
+    <h1>Como Windows,<br>pero mejor.<span class="ver">«PULSAR»</span></h1>
+    <p class="lead">Una distro basada en Arch Linux, <b>gratis y sin anuncios</b>, para quienes vienen de Windows y para jugar. Ahora con apps de Android, widgets y mucho más.</p>
+    <div class="cta">
+      <a class="btn primary" href="#instalar"><span class="ms">download</span>Descargar gratis</a>
+      <a class="btn ghost" href="#nuevo"><span class="ms">auto_awesome</span>Lo nuevo de la 2.0</a>
     </div>
-    <img src="assets/quantum-mark.svg" alt="" width="28" height="28">
-    <span>Quantum Linux · Como Windows, pero mejor. Hecho con la comunidad.</span>
-    <span class="tiny">No está afiliado a Microsoft ni a Arch Linux.</span>
-  </footer>
+    <div class="meta"><span><span class="ms">album</span>ISO de 3,5 GB · 64 bits</span><span><span class="ms">sports_esports</span>Steam y Proton listos</span><span><span class="ms">translate</span>Español · English · Português</span></div>
+  </div>
+</header>
 
-  <div class="toast" id="toast" role="status"></div>
-  <script src="main.js"></script>
-  <script src="enhance.js"></script>
-  <script src="extra.js"></script>
+<main>
+<section class="s" id="nuevo"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Lo nuevo</span>
+  <h2>Quantum 2.0 <em>«Pulsar»</em></h2>
+  <p class="sub">La actualización más grande hasta ahora. Si ya tienes Quantum, llega sola con «Actualizar».</p>
+  <div class="grid g3">
+    <div class="card big hov reveal">
+      <div class="art"><svg viewBox="0 0 512 512" aria-hidden="true"><path d="M256 118 L376 384 M256 118 L136 384" stroke="#0E1A16" stroke-width="40" stroke-linecap="round" fill="none"/><ellipse cx="256" cy="300" rx="170" ry="54" fill="none" stroke="#0E1A16" stroke-width="18" transform="rotate(-14 256 300)"/><circle cx="412" cy="262" r="16" fill="#0E1A16"/></svg></div>
+      <div><span class="tag">Nuevo</span><h3>Andrómeda: tus apps de Android en el PC</h3>
+      <p>Instala juegos y apps de celular con un clic: desde Explorar, con Aurora Store o con doble clic en un .apk. Cada app se abre en su propia ventana y aparece en el menú Inicio.</p></div>
+    </div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">widgets</span></div><h3>Widgets en el escritorio</h3><p>Reloj, clima, notas y uso del PC sobre tu fondo.</p></div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">sports_esports</span></div><h3>Controles en Fotón</h3><p>Prueba botones y vibración, y mira cuánta batería le queda a tu control.</p></div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">self_improvement</span></div><h3>Modos</h3><p>Relajación, Concentración o Noche: cambian varias cosas a la vez, como en el celular.</p></div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">translate</span></div><h3>Português (Brasil)</h3><p>Quantum ahora también habla portugués.</p></div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">security</span></div><h3>Antivirus</h3><p>Analiza tus descargas y documentos con un clic desde el Centro Quantum.</p></div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">select_all</span></div><h3>Escritorio como Windows</h3><p>Selección con el cuadro celeste, mover varios íconos a la vez y el menú de siempre.</p></div>
+    <div class="card hov reveal"><div class="ic"><span class="ms">brightness_7</span></div><h3>Nuevo logo y fondo Pulsar</h3><p>Una identidad renovada, con el fondo animado y la animación de arranque flotando.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="por-que"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Por qué Quantum</span>
+  <h2>Todo lo bueno de Linux, <em>sin lo difícil</em></h2>
+  <div class="grid g3">
+    <div class="card reveal"><div class="ic"><span class="ms">sports_esports</span></div><h3>Hecho para jugar</h3><p>Steam con Proton listo, kernel Zen, modo juego y Fotón: tus juegos de Steam, Epic, GOG y Windows en un solo lugar.</p></div>
+    <div class="card reveal"><div class="ic"><span class="ms">desktop_windows</span></div><h3>Fácil si vienes de Windows</h3><p>Barra de tareas, menú Inicio y los atajos de siempre. Los .exe se abren con doble clic.</p></div>
+    <div class="card reveal"><div class="ic"><span class="ms">storefront</span></div><h3>Quantum Store</h3><p>Una sola tienda para todo: los repos de Arch, Flathub y AUR. Buscas, haces clic y listo.</p></div>
+    <div class="card reveal"><div class="ic"><span class="ms">palette</span></div><h3>Tu estilo, al instante</h3><p>Modo claro u oscuro, tres estilos de escritorio y colores que se adaptan a tu fondo. Sin reiniciar.</p></div>
+    <div class="card reveal"><div class="ic"><span class="ms">verified_user</span></div><h3>Sin anuncios ni sorpresas</h3><p>Nada de publicidad, apps «sugeridas» ni reinicios forzados. Las actualizaciones las decides tú.</p></div>
+    <div class="card reveal"><div class="ic"><span class="ms">history</span></div><h3>Vuelve atrás si algo falla</h3><p>Antes de cada actualización se guarda una copia del sistema. Si algo sale mal, eliges la anterior al arrancar.</p></div>
+  </div>
+</div></section>
+
+<section class="s" id="capturas"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Así se ve</span>
+  <h2>Bonito desde el <em>primer clic</em></h2>
+  <p class="sub">Capturas reales de Quantum Linux 2.0. Toca una para verla en grande.</p>
+  <div class="shots">
+    <div class="shot wide reveal"><img src="assets/img/2-escritorio.webp" alt="Escritorio de Quantum con widgets y el fondo Pulsar" loading="lazy"><span>Escritorio con widgets y el fondo Pulsar</span></div>
+    <div class="shot reveal"><img src="assets/img/2-inicio.webp" alt="Menú Inicio" loading="lazy"><span>Menú Inicio</span></div>
+    <div class="shot reveal"><img src="assets/img/2-andromeda.webp" alt="Andrómeda" loading="lazy"><span>Andrómeda</span></div>
+    <div class="shot reveal"><img src="assets/img/2-novedades.webp" alt="Ventana de Novedades" loading="lazy"><span>Novedades</span></div>
+  </div>
+</div></section>
+
+<section class="s" id="comparacion"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Comparación</span>
+  <h2>Windows 11 vs <em>Quantum</em></h2>
+  <table class="reveal">
+    <tr><th></th><th>Windows 11</th><th>Quantum Linux</th></tr>
+    <tr><td>Precio</td><td>Licencia de pago</td><td class="q"><span class="ms">check_circle</span>Gratis</td></tr>
+    <tr><td>Anuncios y apps sugeridas</td><td>Sí, en el menú Inicio</td><td class="q"><span class="ms">check_circle</span>Ninguno</td></tr>
+    <tr><td>Pide TPM 2.0 y CPU reciente</td><td>Sí</td><td class="q"><span class="ms">check_circle</span>No</td></tr>
+    <tr><td>Apps de Android</td><td>Ya no (se quitó)</td><td class="q"><span class="ms">check_circle</span>Sí, con Andrómeda</td></tr>
+    <tr><td>Reinicios por actualizaciones</td><td>Automáticos</td><td class="q"><span class="ms">check_circle</span>Cuando tú quieras</td></tr>
+    <tr><td>Cuenta obligatoria al instalar</td><td>Cuenta de Microsoft</td><td class="q"><span class="ms">check_circle</span>No</td></tr>
+    <tr><td>Código abierto</td><td>No</td><td class="q"><span class="ms">check_circle</span>Sí</td></tr>
+  </table>
+</div></section>
+
+<section class="s" id="instalar"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Instalar</span>
+  <h2>Descarga <em>Quantum 2.0</em></h2>
+  <p class="sub">Pruébalo desde un USB sin instalar nada. Si te gusta, instálalo junto a Windows con un par de clics.</p>
+  <div class="dl">
+    <div class="card main reveal">
+      <span class="tag">Beta pública</span>
+      <h3>Quantum Linux 2.0 «Pulsar»</h3>
+      <div class="facts"><span>quantumlinux-2.0-2026.11.10-x86_64.iso</span><span>3,5 GB</span><span>UEFI y BIOS</span><span>Arranque seguro</span></div>
+      <a class="btn primary" href="https://sourceforge.net/projects/quantum-linux/files/2.0/quantumlinux-2.0-2026.11.10-x86_64.iso/download"><span class="ms">download</span>Descargar ISO</a>
+      <p class="note">Descarga directa desde <a href="https://sourceforge.net/projects/quantum-linux/files/" target="_blank" rel="noopener">SourceForge</a> (todas las versiones y sus sumas SHA256).</p>
+      <p class="sha">SHA256: 4530a4fdb596252dd728e9f54953093a8550a3765c73cf39051a221b352ce116<button class="copy" type="button" data-copy="4530a4fdb596252dd728e9f54953093a8550a3765c73cf39051a221b352ce116" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
+    </div>
+    <div class="card reveal">
+      <h3 style="font-size:20px">En 3 pasos</h3>
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>Descarga el ISO</b><small>3,5 GB, directo desde SourceForge.</small></div></li>
+        <li><span class="n">2</span><div><b>Grábalo en un USB</b><small>Con <a href="https://www.ventoy.net/" target="_blank" rel="noopener">Ventoy</a>, <a href="https://etcher.balena.io/" target="_blank" rel="noopener">balenaEtcher</a> o <a href="https://rufus.ie/" target="_blank" rel="noopener">Rufus</a> (8 GB o más).</small></div></li>
+        <li><span class="n">3</span><div><b>Arranca e instala</b><small>Pruébalo y pulsa «Instalar Quantum». «Instalar junto a Windows» ya viene elegido.</small></div></li>
+      </ol>
+      <h3 style="font-size:18px; margin-top:26px">Requisitos</h3>
+      <ul class="req">
+        <li><span class="ms">memory</span>Procesador de 64 bits</li>
+        <li><span class="ms">memory_alt</span>4 GB de RAM (8 GB recomendado)</li>
+        <li><span class="ms">hard_drive</span>40 GB de disco</li>
+        <li><span class="ms">usb</span>USB de 8 GB para instalar</li>
+      </ul>
+    </div>
+  </div>
+  <div class="grid g2">
+    <div class="card reveal">
+      <div class="ic"><span class="ms">install_desktop</span></div>
+      <h3>Desde Windows, sin tocar la BIOS <span class="tag" style="margin:0 0 0 6px">Beta</span></h3>
+      <p>Lo abres, respondes unas preguntas y conectas un pendrive. Quantum se descarga, se instala solo junto a Windows (o en su lugar) y se lleva tus archivos.</p>
+      <div class="facts"><span>Windows 10 y 11</span><span>8 MB</span><span>Pendrive de 8 GB</span></div>
+      <a class="btn ghost" href="descargas/Instalar-Quantum.exe" download="Instalar Quantum.exe"><span class="ms">download</span>Descargar instalador</a>
+      <p class="note">Es una beta: respalda antes tus archivos importantes. Si Windows dice «Windows protegió tu PC», toca «Más información» y luego «Ejecutar de todas formas».</p>
+    </div>
+    <div class="card reveal">
+      <div class="ic"><span class="ms">help</span></div>
+      <h3>¿Tienes Windows en el mismo disco?</h3>
+      <p>El instalador revisa que Windows esté bien apagado (sin hibernación ni «Inicio rápido»), que no tenga BitLocker y que le quede espacio. Si algo falta, te dice cómo arreglarlo en simple, y después solo arrastras un divisor para repartir el espacio.</p>
+    </div>
+  </div>
+</div></section>
+
+<section class="s" id="desde-windows"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Trae tus cosas</span>
+  <h2>Pasa todo desde <em>Windows</em></h2>
+  <p class="sub">Tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam, en Quantum en minutos.</p>
+  <div class="dl">
+    <div class="card reveal">
+      <ol class="steps">
+        <li><span class="n">1</span><div><b>En Windows</b><small>Descarga «Pasar a Quantum» y ábrelo. No se instala.</small></div></li>
+        <li><span class="n">2</span><div><b>Copia a un pendrive</b><small>Elige qué llevar y se copia todo con un clic.</small></div></li>
+        <li><span class="n">3</span><div><b>Conéctalo en Quantum</b><small>Quantum lo detecta y deja cada cosa en su lugar.</small></div></li>
+      </ol>
+    </div>
+    <div class="card main reveal">
+      <div class="ic"><span class="ms">move_to_inbox</span></div>
+      <h3>Pasar a Quantum</h3>
+      <p>Para Windows 10 y 11 · 6 MB · No se instala</p>
+      <div style="margin-top:20px"><a class="btn primary" href="descargas/Pasar-a-Quantum.exe" download="Pasar a Quantum.exe"><span class="ms">download</span>Descargar para Windows</a></div>
+      <p class="sha">SHA256: 6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03<button class="copy" type="button" data-copy="6321f72e222382f01ceeda6e7908ea8d98636486a08401c1793d808671fe4c03" aria-label="Copiar SHA256"><span class="ms">content_copy</span></button></p>
+    </div>
+  </div>
+</div></section>
+
+<section class="s" id="ficha"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Para los curiosos</span>
+  <h2>Ficha <em>técnica</em></h2>
+  <table class="spec reveal">
+    <tr><td>Versión</td><td>2.0 «Pulsar» (10 de noviembre de 2026)</td></tr>
+    <tr><td>Basada en</td><td>Arch Linux (actualización continua)</td></tr>
+    <tr><td>Arquitectura</td><td>x86_64 (64 bits)</td></tr>
+    <tr><td>Kernel</td><td>linux-zen</td></tr>
+    <tr><td>Escritorio</td><td>Quantum Shell (propio, hecho con Quickshell/QML) sobre Wayfire 0.11 (Wayland), con tres estilos: Caelestial, Serpantium y Nimbus</td></tr>
+    <tr><td>Instalador</td><td>Calamares 3.4 con diseño propio e «Instalar junto a Windows» · instalador para Windows (beta)</td></tr>
+    <tr><td>Sistema de archivos</td><td>Btrfs con Snapper: copia del sistema antes de cada actualización</td></tr>
+    <tr><td>Arranque</td><td>GRUB · UEFI y BIOS · arranque seguro (shim firmado + llave propia)</td></tr>
+    <tr><td>Paquetes</td><td>pacman (repos de Arch y repo propio [quantum], firmado) · Flatpak/Flathub · AUR</td></tr>
+    <tr><td>Apps propias</td><td>Centro Quantum, Quantum Store, Fotón (juegos), Andrómeda (Android), Archivos, Cronos, Drivers, Ayuda, Pasar a Quantum</td></tr>
+    <tr><td>Juegos</td><td>Steam con Proton, Proton-GE, umu, MangoHud, GameMode</td></tr>
+    <tr><td>Android</td><td>Andrómeda: Waydroid (Android 13, sin Google), F-Droid y Aurora Store</td></tr>
+    <tr><td>Idiomas</td><td>Español, inglés y portugués (Brasil)</td></tr>
+    <tr><td>Licencia</td><td>GPL-3.0 (código propio) · software libre</td></tr>
+  </table>
+</div></section>
+
+<section class="s" id="novedades"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Historial</span>
+  <h2>Cómo ha <em>crecido</em></h2>
+  <p class="sub">Quantum se actualiza seguido: las mejoras llegan solas con «Actualizar».</p>
+  <ul class="timeline">
+    <li class="card reveal"><span class="date">10 nov 2026</span><h3>Quantum 2.0 «Pulsar»</h3>
+      <ul><li>Andrómeda: apps y juegos de Android en el PC, sin cuenta de Google.</li>
+      <li>Widgets en el escritorio, Modos (Relajación, Concentración, Noche) y antivirus.</li>
+      <li>Controles en Fotón: prueba de botones, vibración y batería.</li>
+      <li>Escritorio como Windows: selección con el cuadro celeste y el menú de siempre.</li>
+      <li>Português (Brasil), ventana de Novedades después de actualizar y logo nuevo.</li>
+      <li>Fondo animado Pulsar y animación de arranque con el logo flotando.</li></ul></li>
+    <li class="card reveal"><span class="date">Nov 2026</span><h3>1.8 y 1.9 «Quark»</h3>
+      <ul><li>Personalizar rediseñado, fondo animado Onda y arreglos reportados por los testers.</li>
+      <li>Serpantium y Nimbus ya se pueden personalizar; bloqueo automático y luz del teclado.</li></ul></li>
+    <li class="card reveal"><span class="date">31 oct 2026</span><h3>Bienvenida completa, Archivos y fondos animados</h3>
+      <ul><li>Bienvenida en 5 pasos, el explorador Archivos y fondos animados que se pausan al jugar.</li></ul></li>
+    <li class="card reveal"><span class="date">25 oct 2026</span><h3>Instalar desde Windows</h3>
+      <ul><li>Instalador para Windows, arranque seguro sin desactivar nada y «Pasar a Quantum».</li></ul></li>
+    <li class="card reveal"><span class="date">20 oct 2026</span><h3>Quantum Linux 1.0 «Quark»</h3>
+      <ul><li>Primera versión pública (beta): Quantum Shell, Centro Quantum, Quantum Store y Fotón.</li></ul></li>
+  </ul>
+</div></section>
+
+<section class="s" id="ayuda"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Ayuda</span>
+  <h2>Ayuda y <em>documentación</em></h2>
+  <div class="grid g3">
+    <a class="card reveal" href="#instalar"><div class="ic"><span class="ms">install_desktop</span></div><h3>Instalar</h3><p>Desde Windows con el instalador, o grabando el ISO en un USB y eligiendo «Instalar Quantum».</p></a>
+    <div class="card reveal"><div class="ic"><span class="ms">system_update</span></div><h3>Actualizar</h3><p>Toca el aviso de actualizaciones en la barra o «Actualizar» en el Centro Quantum. Se actualizan el sistema y las apps de una vez.</p></div>
+    <div class="card reveal"><div class="ic"><span class="ms">history</span></div><h3>Volver atrás</h3><p>Si una actualización falla, al encender elige la copia anterior del sistema en el menú de arranque.</p></div>
+    <a class="card reveal" href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener"><div class="ic"><span class="ms">bug_report</span></div><h3>Reportar un error</h3><p>Desde «Ayuda y sugerencias» en Quantum, o abriendo un reporte en GitHub.</p></a>
+    <a class="card reveal" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><div class="ic"><span class="ms">forum</span></div><h3>Pedir ayuda</h3><p>La comunidad responde en el Discord de Quantum.</p></a>
+    <a class="card reveal" href="https://github.com/QuantumLinux-arch" target="_blank" rel="noopener"><div class="ic"><span class="ms">code</span></div><h3>Código y paquetes</h3><p>El proyecto y su repo de paquetes [quantum] (firmado) están en GitHub.</p></a>
+  </div>
+</div></section>
+
+<section class="s" id="preguntas"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Preguntas</span>
+  <h2>Preguntas <em>frecuentes</em></h2>
+  <div class="faq">
+    <details class="reveal"><summary>¿Puedo traer mis cosas de Windows?</summary><p>Sí. Con «Pasar a Quantum» copias en Windows tus archivos, tu foto, tu fondo, tus redes Wi-Fi, tus favoritos y tus juegos de Steam a un pendrive. Al conectarlo en Quantum, todo va a su lugar.</p></details>
+    <details class="reveal"><summary>¿Puedo usar apps de Android?</summary><p>Sí, con Andrómeda. La primera vez descarga Android (unos 900 MB) y después instalas apps desde Explorar, con Aurora Store o con doble clic en un .apk. Algunas apps que exigen Google (bancos, ciertos juegos) pueden no abrir.</p></details>
+    <details class="reveal"><summary>¿Tengo que entrar a la BIOS para instalar?</summary><p>No, si usas el instalador para Windows: prepara el pendrive y reinicia el PC solo. Solo verás una pantalla azul la primera vez, para que tu PC confíe en Quantum con el arranque seguro activado.</p></details>
+    <details class="reveal"><summary>¿Es gratis de verdad?</summary><p>Sí. Quantum Linux es gratis y de código abierto. No hay versión de pago, ni suscripciones, ni anuncios.</p></details>
+    <details class="reveal"><summary>¿Funcionan mis juegos de Windows?</summary><p>Muchísimos sí, gracias a Steam y Proton. Algunos juegos con antitrampas (como Valorant) todavía no funcionan en Linux. Puedes revisar cada juego en <a href="https://www.protondb.com/" target="_blank" rel="noopener">ProtonDB</a>.</p></details>
+    <details class="reveal"><summary>¿Necesito saber usar la terminal?</summary><p>No. Instalas apps desde Quantum Store, cambias ajustes desde el Centro Quantum y Personalizar, y actualizas con un botón.</p></details>
+    <details class="reveal"><summary>¿Puedo probarlo sin instalar?</summary><p>Sí. Al arrancar desde el USB entras a una sesión de prueba completa; nada cambia en tu PC hasta que pulsas «Instalar Quantum».</p></details>
+  </div>
+</div></section>
+
+<section class="s" id="creditos"><div class="glow-line"></div><div class="wrap">
+  <span class="kicker">Créditos</span>
+  <h2>Hecho con la <em>comunidad</em></h2>
+  <p class="sub">Quantum Linux existe gracias a estas personas.</p>
+  <div class="people">
+    <a class="card person reveal" href="https://www.tiktok.com/@quantum.os" target="_blank" rel="noopener"><img class="mk" src="assets/quantum-mark.svg" alt=""><h3>@quantum.os</h3><span class="role">Creador del proyecto</span><p>Idea, diseño y desarrollo de Quantum Linux.</p></a>
+    <a class="card person reveal" href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><img src="assets/img/lauty.webp" alt=""><h3>Lauty</h3><span class="role">Multiusos</span><p>Primer colaborador oficial. Creó el Discord de Quantum y ayuda en todo lo que haga falta.</p></a>
+    <div class="card person reveal"><img src="assets/img/interactive-proyects.webp" alt=""><h3>Interactive proyects</h3><span class="role">Diseño web</span><p>Mejoró esta página: modo oscuro, animaciones y una versión más cómoda para celular.</p></div>
+    <div class="card person reveal"><img src="assets/img/ilyamiro.webp" alt=""><h3>ilyamiro</h3><span class="role">Inspiró Serpantium</span><p>Creador de Serpantinum, el escritorio que inspiró a Serpantium (@ilyamiro.dev).</p></div>
+  </div>
+  <p class="thanks reveal"><span class="ms">favorite</span> Y a todos los que comentan, prueban y comparten: cada idea en TikTok ayuda a decidir qué llega en la próxima versión.</p>
+  <div class="chips reveal">
+    <a href="https://archlinux.org" target="_blank" rel="noopener">Arch Linux</a><a href="https://wayfire.org" target="_blank" rel="noopener">Wayfire</a>
+    <a href="https://quickshell.org" target="_blank" rel="noopener">Quickshell</a><a href="https://calamares.io" target="_blank" rel="noopener">Calamares</a>
+    <a href="https://waydro.id" target="_blank" rel="noopener">Waydroid</a><a href="https://github.com/InioX/matugen" target="_blank" rel="noopener">matugen</a>
+    <a href="https://github.com/PapirusDevelopmentTeam/papirus-icon-theme" target="_blank" rel="noopener">Papirus</a><a href="https://fonts.google.com/icons" target="_blank" rel="noopener">Material Symbols</a>
+    <a href="https://rsms.me/inter/" target="_blank" rel="noopener">Inter</a><a href="https://cachyos.org" target="_blank" rel="noopener">CachyOS</a>
+  </div>
+  <a class="card promo reveal" href="https://emprepage.dev/" target="_blank" rel="noopener"><img src="assets/promo/emprepage.webp" alt=""><div><small>Recomendado</small><b>EmprePage</b> · Crea la web de tu emprendimiento en minutos</div></a>
+</div></section>
+</main>
+
+<footer><div class="wrap">
+  <div class="row">
+    <a class="brand" href="#"><img src="assets/quantum-mark.svg" alt="">Quantum Linux</a>
+    <div class="links">
+      <a href="https://www.tiktok.com/@quantum.os" target="_blank" rel="noopener"><span class="ms">smart_display</span>TikTok</a>
+      <a href="https://discord.gg/qWmEb9xHkZ" target="_blank" rel="noopener"><span class="ms">forum</span>Discord</a>
+      <a href="https://github.com/QuantumLinux-arch" target="_blank" rel="noopener"><span class="ms">code</span>GitHub</a>
+      <a href="https://github.com/QuantumLinux-arch/quantumlinux-arch.github.io/issues/new/choose" target="_blank" rel="noopener"><span class="ms">bug_report</span>Reportar un error</a>
+      <a href="en/" hreflang="en"><span class="ms">translate</span>English</a>
+    </div>
+  </div>
+  <p class="fine">Quantum Linux · Como Windows, pero mejor. Hecho con la comunidad. · No está afiliado a Microsoft ni a Arch Linux.</p>
+</div></footer>
+
+<div class="lightbox"><img alt=""></div>
+<div class="toast" role="status"></div>
+<button class="up" type="button" aria-label="Volver arriba"><span class="ms">arrow_upward</span></button>
+<script src="pulsar.js" defer></script>
 </body>
 </html>
