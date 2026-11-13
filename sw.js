@@ -1,7 +1,7 @@
 // Quantum Linux — caché para que cargue al instante y funcione sin conexión.
 // El video del fondo no se guarda (es grande y se pide por partes). La página (HTML) siempre se pide primero a internet: así el enlace del ISO y el SHA256 nunca
 // quedan viejos. Lo demás (estilos, scripts, imágenes) sale de la caché y se actualiza de fondo.
-const VERSION = "quantum-v9", CORE = ["./", "index.html", "en/", "pulsar.css", "pulsar.js", "manifest.webmanifest", "assets/quantum-mark.svg", "assets/favicon.png", "assets/icon-192.png",
+const VERSION = "quantum-v10", CORE = ["./", "index.html", "en/", "pulsar.css", "pulsar.js", "manifest.webmanifest", "assets/quantum-mark.svg", "assets/favicon.png", "assets/icon-192.png",
   "assets/pulsar-poster.jpg", "assets/img/2-escritorio.webp", "assets/img/2-inicio.webp", "assets/img/2-andromeda.webp", "assets/img/2-novedades.webp"];
 self.addEventListener("install", (e) => { e.waitUntil(caches.open(VERSION).then((c) => c.addAll(CORE)).then(() => self.skipWaiting())); });
 self.addEventListener("activate", (e) => { e.waitUntil(caches.keys().then((k) => Promise.all(k.filter((n) => n !== VERSION).map((n) => caches.delete(n)))).then(() => self.clients.claim())); });
